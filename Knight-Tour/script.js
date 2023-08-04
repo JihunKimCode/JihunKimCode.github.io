@@ -19,6 +19,7 @@ class Knight {
         ];
     }
 
+    // Updated find method using Warnsdorff's rule
     find(row, col, order) {
         if (row >= this.rows || row < 0 || col >= this.cols || col < 0) return false;
         if (this.tour[row * this.cols + col] !== -1) return false;
@@ -26,14 +27,35 @@ class Knight {
         this.tour[row * this.cols + col] = order;
         if (order === this.rows * this.cols - 1) return true;
 
-        for (let i = 0; i < this.move.length; i++) {
-            const nextRow = row + this.move[i][0];
-            const nextCol = col + this.move[i][1];
-            if (this.find(nextRow, nextCol, order + 1)) return true;
+        // Create an array to store available moves and their accessibility
+        const availableMoves = this.move.map(([dx, dy]) => ({
+            dx,
+            dy,
+            accessibility: this.getAccessibility(row + dx, col + dy)
+        }));
+
+        // Sort available moves based on their accessibility (ascending order)
+        availableMoves.sort((a, b) => a.accessibility - b.accessibility);
+
+        for (const { dx, dy } of availableMoves) {
+            if (this.find(row + dx, col + dy, order + 1)) return true;
         }
 
         this.tour[row * this.cols + col] = -1;
         return false;
+    }
+
+    // Helper method to calculate the accessibility of a square
+    getAccessibility(row, col) {
+        let count = 0;
+        for (let i = 0; i < this.move.length; i++) {
+            const nextRow = row + this.move[i][0];
+            const nextCol = col + this.move[i][1];
+            if (nextRow >= 0 && nextRow < this.rows && nextCol >= 0 && nextCol < this.cols && this.tour[nextRow * this.cols + nextCol] === -1) {
+                count++;
+            }
+        }
+        return count;
     }
 
     getBoardHTML() {
@@ -154,8 +176,8 @@ function startTour() {
         clearInterval(animationInterval); // Pause the animation by clearing the interval
     }
 
-    let rp = parseInt(prompt('Row: Where do you want to start (-1 to Random)?', '0'));
-    let cp = parseInt(prompt('Column: Where do you want to start (-1 to Random)?', '0'));
+    let rp = parseInt(prompt('Which "ROW" do you want to start (-1 to Random)?', '0'));
+    let cp = parseInt(prompt('Which "COLUMN" do you want to start (-1 to Random)?', '0'));
 
     knight.startTour(rp, cp);
 }
