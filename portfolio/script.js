@@ -33,27 +33,47 @@ function showSection(sectionId) {
     hideSectionsExcept(sectionId);
 }
 
-// Function to get the current section from the URL hash and show it
 function showCurrentSectionFromHash() {
     const currentHash = window.location.hash;
     const sectionId = currentHash ? currentHash.substring(1) : "home";
+
+    // Remove the 'active' class from all menu links
+    document.querySelectorAll("nav a").forEach((link) => {
+        link.classList.remove("active");
+    });
+
+    // Add the 'active' class to the menu link corresponding to the current section
+    const activeLink = document.querySelector(`nav a[href="#${sectionId}"]`);
+    if (activeLink) {
+        activeLink.classList.add("active");
+    }
+
     showSection(sectionId);
 }
 
-// Handle menu link clicks with smooth scroll effect
-document.querySelectorAll("nav a").forEach((link) => {
-    link.addEventListener("click", (event) => {
-        event.preventDefault();
-        const sectionId = link.getAttribute("href").substring(1);
-        const targetSection = document.getElementById(sectionId);
-        targetSection.scrollIntoView({ behavior: "smooth" });
+// Function to handle menu link clicks
+function handleMenuLinkClick(event) {
+    event.preventDefault();
+    const sectionId = this.getAttribute("href").substring(1);
+    const targetSection = document.getElementById(sectionId);
+    targetSection.scrollIntoView({ behavior: "smooth" });
 
-        // Update the URL without reloading the page
-        window.history.pushState(null, null, "#" + sectionId);
+    // Update the URL without reloading the page
+    window.history.pushState(null, null, "#" + sectionId);
 
-        // Show the corresponding section with animation
-        showSection(sectionId);
+    // Show the corresponding section with animation
+    showSection(sectionId);
+
+    // Add the 'active' class to the clicked menu link
+    document.querySelectorAll("nav a").forEach((link) => {
+        link.classList.remove("active");
     });
+    this.classList.add("active");
+}
+
+// Add click event listeners to menu links
+document.querySelectorAll("nav a").forEach((link) => {
+    link.addEventListener("click", handleMenuLinkClick);
 });
 
 // Show the current section from the URL hash on initial load

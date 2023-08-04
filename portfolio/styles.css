@@ -1,7 +1,22 @@
+@font-face{
+    font-family: 'NanumB';
+    src: url('fonts/NanumBarunGothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'NanumS';
+    src: url('fonts/NanumSquareRoundB.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    background-color: #57b5dc;
+    font-family: 'NanumS', sans-serif;
 }
 
 header {
@@ -11,25 +26,38 @@ header {
     text-align: center;
 }
 
+section{
+    background-color: #57b5dc;
+}
+
 nav {
     background-color: #57b5dc;
-    color: #fff;
-    padding: 10px;
+    color: gray;
+    /* padding: 10px; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 nav a {
-    color: #fff;
-    font-size: 16px;
+    color:gray;
+    font-size: 28px;
     text-decoration: none;
     margin-right: 20px;
     padding: 5px;
+    height: 40px;
+    transition: font-size 0.2s ease; /* Add a smooth transition effect */
 }
 
 nav a:hover {
-    text-decoration: underline;
+    font-size: 36px; /* Increase the font size on hover */
+    color: white;
+}
+
+/* Style for the active menu link (when the corresponding section is in view) */
+nav a.active {
+    font-size: 36px;
+    color: white;
 }
 
 main {
@@ -67,4 +95,55 @@ section:not(:first-of-type) {
 /* Hide all sections except the home section by default */
 section:not(:first-of-type) {
     display: none;
+}
+
+img{
+    width: 40%;
+    border: solid #57b5dc;
+    border-radius: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2),0 20px 20px 0 rgba(0,0,0,0.2);
+    float: left;
+    animation: slideInFromLeft 1s ease; 
+}
+
+descheader {
+    width: 57%;
+    float: right;
+    /* line-height: 1.2; */
+    margin-top: 25px;
+    font-size: 64px;
+    animation: slideInFromRight 1s ease; 
+}
+
+desc{
+    width: 57%;
+    float: right;
+    font-family: 'NanumB', sans-serif;
+    font-size: 28px;
+    line-height: 1.6;
+    animation: slideInFromRight 1s ease; 
+}
+
+/* Define the animation for the image coming from the left */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Define the animation for the description elements coming from the right */
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
