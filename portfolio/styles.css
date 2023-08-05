@@ -44,8 +44,10 @@ nav {
     /* background-color: #57b5dc; */
     color: #a8a29c;
     /* padding: 10px; */
+    width: 80%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 nav a {
     color:#a8a29c;
@@ -221,6 +223,26 @@ desc{
     background-color: #EA4335;
 }
 
+.name {
+    top: 0%;
+    left: 30px;
+    z-index: 3; /* Ensure the icons appear above other elements */
+    float: left;
+    padding: 10px 10px;
+    font-size: 32px;
+    font-family: 'NanumB', sans-serif;
+}
+
+a {
+    text-decoration: none; /* Remove the underline */
+    color: white; /* Set the text color to white */
+}
+
+/* Style for hovered hyperlink text (anchors) */
+a:hover {
+    text-decoration: none; /* Add underline on hover */
+}
+
 .logo {
     top: 0%;
     left: 30px;
@@ -380,6 +402,10 @@ desc{
     }
 
     .icons {
+        display: none;
+    }
+
+    .name{
         display: none;
     }
 }
