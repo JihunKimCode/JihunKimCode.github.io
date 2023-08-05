@@ -16,7 +16,7 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: #57b5dc;
+    background-color: #f9ecdb;
     font-family: 'NanumS', sans-serif;
 }
 
@@ -33,7 +33,7 @@ header {
 
 section{
     width: 100%;
-    background-color: #57b5dc;
+    background-color: #f9ecdb;
 }
 #menuBtn {
     display: none;
@@ -42,14 +42,13 @@ section{
 
 nav {
     /* background-color: #57b5dc; */
-
-    color: gray;
+    color: #a8a29c;
     /* padding: 10px; */
     display: flex;
     justify-content: center;
 }
 nav a {
-    color:gray;
+    color:#a8a29c;
     font-size: 28px;
     text-decoration: none;
     margin-right: 20px;
@@ -124,9 +123,10 @@ section:not(:first-of-type) {
 }
 
 img{
-    margin-top: 60px;
+    margin-top: 100px;
     width: 35%;
-    border: solid #57b5dc;
+    border: solid #846d62;
+    border-width: 15px;
     border-radius: 50%;
     background-size: contain;
     background-repeat: no-repeat;
@@ -143,8 +143,8 @@ h2 {
 }
 
 desc{
-    margin-top: 60px;
-    width: 57%;
+    margin-top: 100px;
+    width: 60%;
     float: right;
     font-family: 'NanumB', sans-serif;
     font-size: 28px;
@@ -172,31 +172,96 @@ desc{
     }
 }   
 
-/* Add some styling to the icons */
-/* Add some styling to the icons container and position them in the top right corner */
 .icons {
     display: flex;
     justify-content: flex-end; /* Align the icons to the right side */
-    margin-top: 20px;
+    /* margin-top: 20px; */
     position: fixed;
     top: 10px;
-    right: 10px;
-    z-index: 101; /* Ensure the icons appear above other elements */
+    right: 20px;
+    z-index: 2; /* Ensure the icons appear above other elements */
 }
 
 /* Add spacing between the icons and remove underlines */
 .icons a {
     margin-left: 10px;
-    font-size: 24px;
-    color: #57b5dc;
+    font-size: 36px;
     text-decoration: none; /* Remove underlines from the icons */
+    color: rgb(207, 206, 206);
+}
+
+.icons a:hover{
+    color: white;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style for the LinkedIn button */
+.btn.btn-linkedin {
+    background-color: #0A66C2;
+}
+
+/* Style for the GitHub button */
+.btn.btn-github {
+    background-color: #000000;
+}
+
+/* Style for the Email button */
+.btn.btn-email {
+    background-color: #EA4335;
+}
+
+.logo {
+    top: 0%;
+    left: 30px;
+    z-index: 3; /* Ensure the icons appear above other elements */
+}
+
+.logo img {
+    width: 50px; /* Adjust the width of the logo image as needed */
+    height: auto; /* Maintain the aspect ratio of the logo */
+    margin-top: 0px;
+    border: none;
+    border-radius: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: none;
+    float: left;
+    animation: slideInFromLeft 1s ease; 
+}
+
+.biglogo img{
+    margin-top: 100px;
+    width: 35%;
+    border: none;
+    border-radius: 0%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: none;
+    float: left;
+    animation: slideInFromLeft 1s ease; 
 }
 
 /* Media query for mobile-friendly styles */
 @media (max-width: 767px) {
     header{
         position: fixed;
-        background-color: #57b5dc;
+        background-color: #f9ecdb;
+        height: 35px;
     }
     body {
         width: 90%;
@@ -215,8 +280,10 @@ desc{
         display: block;  
         border: none;
         font-size: 24px;
+        color:  #846d62;
+        background-color: #f9ecdb;
         /* padding: 10px; */
-        position: fixed;
+        /* position: fixed; */
     }
     
     /* Position the menu container */
@@ -272,7 +339,7 @@ desc{
         width: 70%;
         border-radius: 50%;
         position: absolute;
-        margin-top: 35px;
+        margin-top: 40px;
         z-index: -1;
     }
     
@@ -286,7 +353,33 @@ desc{
         font-size: 20px;
         width: 90%;
         position: absolute;
-        top: 40%; /* Position the element at the middle of the container */
+        top: 30%; /* Position the element at the middle of the container */
         padding-bottom: 20px;
+        line-height: 1.5;
     }    
+    /* Logo centered on top for mobile devices */
+    .logo {
+        top: 5px;
+        z-index: 3; /* Ensure the icons appear above other elements */
+    
+        display: flex;
+        justify-content: flex-end; /* Align the icons to the right side */
+        /* margin-top: 20px; */
+        position: fixed;
+        right: 17%;
+        z-index: 2; /* Ensure the icons appear above other elements */
+    }
+
+    .logo img {
+        width: 50px; /* Adjust the width of the logo image as needed */
+        height: auto; /* Maintain the aspect ratio of the logo */
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: none;
+        float: right;
+        animation: slideInFromRight 1s ease; 
+    }
+
+    .icons {
+        display: none;
+    }
 }
