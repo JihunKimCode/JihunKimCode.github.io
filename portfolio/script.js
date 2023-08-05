@@ -71,9 +71,12 @@ function handleMenuLinkClick(event) {
     this.classList.add("active");
 }
 
-// Add click event listeners to menu links
+// Close the menu when a menu item is clicked (for better user experience)
 document.querySelectorAll("nav a").forEach((link) => {
-    link.addEventListener("click", handleMenuLinkClick);
+    link.addEventListener("click", () => {
+        const nav = document.querySelector("nav");
+        nav.classList.remove("menu-visible");
+    });
 });
 
 // Show the current section from the URL hash on initial load
@@ -128,3 +131,12 @@ function fadeOut(element) {
 
     requestAnimationFrame(animate);
 }
+
+// Toggle the menu button
+document.getElementById("menuBtn").addEventListener("click", () => {
+    const nav = document.querySelector("nav");
+    const overlay = document.querySelector(".overlay");
+
+    nav.classList.toggle("menu-visible");
+    overlay.classList.toggle("overlay-visible");
+});
