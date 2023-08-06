@@ -486,11 +486,16 @@ a:hover {
 }
 
 /* Styles for tablets (screen sizes between 768px and 1023px) */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1080px) {
     nav {
         width: 100%;
     }    
+
     .contact-icons {
         margin-top: 0px;
     }    
+
+    img{
+        margin-top: 120px;
+    }
 }
