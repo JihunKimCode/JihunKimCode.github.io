@@ -291,6 +291,7 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     font-size: 72px;
+    animation: slideInFromRight 1s ease; 
 }
 
 .contact-icons a{
@@ -315,6 +316,7 @@ a:hover {
     margin-top: 20px;
     cursor: pointer;
     color: black;
+    animation: slideInFromRight 1s ease; 
 }
 
 /* Media query for mobile-friendly styles */
