@@ -63,13 +63,13 @@ nav a {
 
 nav a:hover {
     font-size: 36px; /* Increase the font size on hover */
-    color: white;
+    color: #846d62;
 }
 
 /* Style for the active menu link (when the corresponding section is in view) */
 nav a.active {
     font-size: 36px;
-    color: white;
+    color: #846d62;
 }
 
 /* Add a class for hiding the menu on mobile */
@@ -191,7 +191,7 @@ desc{
     margin-left: 10px;
     font-size: 36px;
     text-decoration: none; /* Remove underlines from the icons */
-    color: rgb(207, 206, 206);
+    color: rgb(228, 228, 228);
 }
 
 .icons a:hover{
@@ -238,7 +238,7 @@ desc{
 
 a {
     text-decoration: none; /* Remove the underline */
-    color: white; /* Set the text color to white */
+    color: #846d62; /* Set the text color to #846d62 */
 }
 
 /* Style for hovered hyperlink text (anchors) */
@@ -326,8 +326,8 @@ a:hover {
     header{
         position: fixed;
         background-color: #f9ecdb;
-        height: 35px;
-        width: 90%;
+        height: 40px;
+        width: 100%;
     }
     body {
         width: 90%;
@@ -370,13 +370,13 @@ a:hover {
 
     nav a:hover {
         font-size: 24px; /* Increase the font size on hover */
-        color: white;
+        color: #846d62;
     }
     
     /* Style for the active menu link (when the corresponding section is in view) */
     nav a.active {
         font-size: 24px;
-        color: white;
+        color: #846d62;
     }
     
     /* Show the menu items when the menu is visible */

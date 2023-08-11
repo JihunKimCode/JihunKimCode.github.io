@@ -140,3 +140,29 @@ document.getElementById("menuBtn").addEventListener("click", () => {
     nav.classList.toggle("menu-visible");
     overlay.classList.toggle("overlay-visible");
 });
+
+// Function to handle header color change on scroll for mobile
+function handleHeaderColorChange() {
+    const header = document.querySelector("header");
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Define the scroll threshold at which the color change occurs
+    const scrollThreshold = 100;
+
+    // Apply a different background color when the user scrolls down
+    if (scrollTop > scrollThreshold) {
+        header.style.backgroundColor = "#846d62"; // Change the color as needed
+        menuBtn.style.backgroundColor = "#846d62"
+        menuBtn.style.color = "#f9ecdb"
+    } else {
+        header.style.backgroundColor = "#f9ecdb"; // Initial color
+        menuBtn.style.backgroundColor = "#f9ecdb"
+        menuBtn.style.color = "#846d62"
+    }
+}
+
+// Listen for the scroll event and handle header color change
+window.addEventListener("scroll", handleHeaderColorChange);
+
+// Call the handler initially to set the initial header color
+handleHeaderColorChange();
