@@ -63,13 +63,13 @@ nav a {
 
 nav a:hover {
     font-size: 36px; /* Increase the font size on hover */
-    color: #846d62;
+    color: #AF9B8E;
 }
 
 /* Style for the active menu link (when the corresponding section is in view) */
 nav a.active {
     font-size: 36px;
-    color: #846d62;
+    color: #AF9B8E;
 }
 
 /* Add a class for hiding the menu on mobile */
@@ -152,7 +152,7 @@ desc{
     float: right;
     font-family: 'NanumB', sans-serif;
     font-size: 28px;
-    line-height: 1.3;
+    line-height: 1.5;
     animation: slideInFromRight 1s ease; 
 }
 
@@ -226,14 +226,14 @@ desc{
     background-color: #EA4335;
 }
 
-.name {
+name {
     top: 0%;
     left: 30px;
     z-index: 3; /* Ensure the icons appear above other elements */
     float: left;
     padding: 10px 10px;
     font-size: 32px;
-    font-family: 'NanumB', sans-serif;
+    font-family: 'NanumS', sans-serif;
 }
 
 a {
@@ -244,6 +244,11 @@ a {
 /* Style for hovered hyperlink text (anchors) */
 a:hover {
     text-decoration: none; /* Add underline on hover */
+}
+
+name a {
+    text-decoration: none; /* Remove the underline */
+    color: #846d62; /* Set the text color to #846d62 */
 }
 
 .logo {
@@ -321,6 +326,138 @@ a:hover {
     animation: slideInFromRight 1s ease; 
 }
 
+/* Common styles for the About section */
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9ecdb;
+    padding: 40px 0;
+}
+
+.resume {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+
+    margin-top: 25px;
+    font-size: 32px;
+    font-family: 'NanumB', sans-serif;
+    margin-right: 10px;
+    animation: slideInFromLeft 1s ease; 
+}
+
+.resume-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.btn-resume {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #846d62;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-family: 'NanumS', sans-serif;
+    text-align: center;
+    animation: slideInFromRight 1s ease; 
+}
+
+.btn-resume:hover {
+    background-color: #5c4c41;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.education{
+    width: 100%;
+    padding: 10px;
+    background-color: #AF9B8E;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    animation: slideInFromLeft 1s ease; 
+}
+
+.skills{
+    width: 100%;
+    padding: 15px;
+    background-color: #AF9B8E;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    animation: slideInFromRight 1s ease; 
+    line-height: 1.5;
+}
+
+.skills img{
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: 20px;
+    margin-top: 0px;
+    margin: 0 auto;
+    border: none;
+    border-width: 1px;
+    border-radius: 0%;
+    animation: none;
+    margin: 3px; 
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.education .image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.education img {
+    display: block;
+    width: 100%;
+    margin-top: 0px;
+    margin: 0 auto;
+    border: none;
+    border-width: 1px;
+    border-radius: 0%;
+    animation: none;
+}
+
+.topic{
+    text-align: center;
+    font-size: 28px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-family: 'NanumB', sans-serif;
+    line-height: 1.2;
+}
+
+.section-interval {
+    width: 4%; /* Adjust the width of the interval as needed */
+}
+
+h3{
+    font-family: 'NanumB', sans-serif;
+    font-size: 24px;
+    margin-bottom: 9px;
+}
+
+li{
+    font-family: 'NanumB', sans-serif;
+    line-height: 1.7;
+    font-size: 20px;
+}
+
 /* Media query for mobile-friendly styles */
 @media (max-width: 767px) {
     header{
@@ -348,6 +485,7 @@ a:hover {
         font-size: 24px;
         color:  #846d62;
         background-color: #f9ecdb;
+        cursor: pointer;
         /* padding: 10px; */
         /* position: fixed; */
     }
@@ -419,7 +557,7 @@ a:hover {
         font-size: 20px;
         width: 90%;
         position: absolute;
-        top: 30%; /* Position the element at the middle of the container */
+        top: 320px; /* Position the element at the middle of the container */
         padding-bottom: 20px;
         line-height: 1.5;
     }    
@@ -449,7 +587,7 @@ a:hover {
         display: none;
     }
 
-    .name{
+    name{
         display: none;
     }
     
@@ -483,6 +621,39 @@ a:hover {
         font-size: 20px;
         margin-top: 10px;
     }
+    .about-content {
+        flex-direction: column;
+    }
+
+    .education,
+    .skills {
+        width: 120%;
+        justify-content: center;
+        align-items: center; /* Center vertically */
+    }
+
+    .resume {
+        width: 90%;
+        align-items: flex-start;
+        font-size: 18px;
+        margin-left: 22px;
+    }
+
+    .education img{
+        display: none;
+    }
+
+    .section-interval {
+        display: none; /* Hide the interval on mobile */
+    }
+    .topic{
+        font-size: 20px;
+    }
+    .resume h2 {
+        font-size: 28px;
+        font-family: 'NanumB', sans-serif;
+        animation: slideInFromLeft 1s ease; 
+    }
 }
 
 /* Styles for tablets (screen sizes between 768px and 1023px) */
@@ -497,5 +668,9 @@ a:hover {
 
     img{
         margin-top: 120px;
+    }
+    
+    .resume {
+        margin-top: 50px;
     }
 }

@@ -154,10 +154,22 @@ function handleHeaderColorChange() {
         header.style.backgroundColor = "#846d62"; // Change the color as needed
         menuBtn.style.backgroundColor = "#846d62"
         menuBtn.style.color = "#f9ecdb"
+
+        // Change the style of anchor elements (menu links)
+        document.querySelectorAll("name a").forEach((link) => {
+            link.style.color = "#f9ecdb"; // Change the color as needed
+        });
+
     } else {
         header.style.backgroundColor = "#f9ecdb"; // Initial color
         menuBtn.style.backgroundColor = "#f9ecdb"
         menuBtn.style.color = "#846d62"
+
+        // Restore the initial style of anchor elements (menu links)
+        document.querySelectorAll("name a").forEach((link) => {
+            link.style.color = "#846d62"; // Restore the initial color
+        });   
+
     }
 }
 
