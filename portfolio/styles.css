@@ -397,21 +397,6 @@ name a {
     line-height: 1.5;
 }
 
-.skills img{
-    display: block;
-    width: auto;
-    max-width: 100%;
-    height: 20px;
-    margin-top: 0px;
-    margin: 0 auto;
-    border: none;
-    border-width: 1px;
-    border-radius: 0%;
-    animation: none;
-    margin: 3px; 
-    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
-}
-
 .education .image-container {
     display: flex;
     justify-content: center;
@@ -642,8 +627,9 @@ li{
         margin-left: 22px;
     }
 
-    .education img{
+    .education .image-container {
         display: none;
+        margin-bottom: 0px;
     }
 
     .section-interval {
@@ -651,6 +637,7 @@ li{
     }
     .topic{
         font-size: 20px;
+        margin-bottom: 10px;
     }
     .resume h2 {
         font-size: 28px;
