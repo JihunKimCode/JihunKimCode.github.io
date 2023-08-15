@@ -70,16 +70,19 @@
     </header>
     <main>
         <section id="home" class="content-section">
-            <div class="img">
-                <img src="Images/Profile.jpg" alt="My profile">
-            </div>
-            <div class="desc">
-                <desc>
-                    <h2>Hello! My name is <font color="#846d62">Jihun Kim</font>. </h2>
-                    I am a passionate student <strong>majoring in Computer Science and minoring in Cybersecurity and Machine Learning at the University of Tennessee, Knoxville.</strong> I always try to experience various technologies and view this field from a diversified perspective.
-                    <br><br>
-                    Feel free to browse my webpage and reach out to me if you have any questions or suggestions!
-                </desc>
+            <div class="imgdesc">
+                <div class="img">
+                    <img src="Images/Profile.jpg" alt="My profile">
+                </div>
+                <div class="section-interval"></div>
+                <div class="desc">
+                    <desc>
+                        <h2>Hello! My name is <font color="#846d62">Jihun Kim</font>. </h2>
+                        I am a passionate student <strong>majoring in Computer Science and minoring in Cybersecurity and Machine Learning at the University of Tennessee, Knoxville.</strong> I always try to experience various technologies and view this field from a diversified perspective.
+                        <br><br>
+                        Feel free to browse my webpage and reach out to me if you have any questions or suggestions!
+                    </desc>
+                </div>
             </div>
         </section>
         <section id="about" class="content-section">
@@ -90,14 +93,17 @@
             </div>
             <div class="about-content">
                 <div class="education">
-                    <div class=topic><b>Education</b> <br>University of Tennessee, Knoxville</div>
+                    <div class=topic><b>Education</b></div>
+                    <h3>University of Tennessee, Knoxville</h3>
                     <div class="image-container">
                         <img src="Images/Ayres_Hall_abree.jpg" alt="Education Image">
                     </div>
                     <ul>
                         <li><b>Aug 2020 - May 2024</b></li>
-                        <li><b>Cumulative GPA</b>: 3.98/4.00</li>
-                        <li><b>Dean's List</b>: Fall 2020 - Spring 2023</li>
+                        <li><b>Cumulative GPA</b>:</li>
+                            <ul><li>3.98/4.00</li></ul>
+                        <li><b>Dean's List</b>:</li>
+                            <ul><li>Fall 2020 - Spring 2023</li></ul>
                         <li><b>Major: Computer Science</b></li>
                         <ul>
                             <li>Data Structures & Algorithms</li>
@@ -127,8 +133,8 @@
                                 <li>Physics for Engineers</li>
                                 <li>Electricity and Magnetism</li>
                             </ul>
-                        <li><b>Club Activities</b>: HackUTK and utkML
-                        </li>
+                        <li><b>Club Activities</b>:</li>
+                        <ul><li>HackUTK and utkML</li></ul>
                     </ul>
                 </div>
                 <div class="section-interval"></div>
@@ -226,12 +232,10 @@
             </ul>
         </section>
         <section id="experiences" class="content-section">
-            <h2>Experiences</h2>
-            <p>This is the experiences section of the website. Here are some of my notable experiences:</p>
-            <ul>
-                <li>Web Developer Intern at ABC Company</li>
-                <li>Frontend Developer at XYZ Agency</li>
-            </ul>
+            <div class="container">
+                <div class="image"><img src="image.jpg" alt="Image"></div>
+                <div class="description">Description goes here.</div>
+              </div>
         </section>
     </main>
 	<script src="script.js"></script>

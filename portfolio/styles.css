@@ -126,9 +126,23 @@ section:not(:first-of-type) {
     display: none;
 }
 
-img{
+.imgdesc{
+    display: table;
     margin-top: 100px;
-    width: 35%;
+}
+
+.img{
+    display: table-cell;
+    width: 30%;
+}
+
+.desc{
+    display: table-cell;
+    width: 65%;
+}
+img{
+    display: table-cell;
+    width: 100%;
     border: solid #846d62;
     border-width: 15px;
     border-radius: 50%;
@@ -147,8 +161,8 @@ h2 {
 }
 
 desc{
-    margin-top: 100px;
-    width: 57%;
+    display: table-cell;
+    width: 100%;
     float: right;
     font-family: 'NanumB', sans-serif;
     font-size: 28px;
@@ -414,6 +428,10 @@ name a {
     animation: none;
 }
 
+.education h3{
+    text-align: center;
+}
+
 .topic{
     text-align: center;
     font-size: 28px;
@@ -437,6 +455,57 @@ li{
     font-family: 'NanumB', sans-serif;
     line-height: 1.7;
     font-size: 20px;
+}
+
+/* Common styles */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .description {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+/* Styles for tablets (screen sizes between 768px and 1023px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .imgdesc{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 20px;
+    }
+    
+    .img{
+        width: 80%;
+        grid-area: 1 / 1 / 3 / 6; 
+    }
+    
+    .desc{
+        width: 80%;
+        grid-area: 3 / 1 / 5 / 6;
+    }
+        
+    nav {
+        width: 100%;
+    }    
+
+    .contact-icons {
+        margin-top: 0px;
+    }
+    
+    .resume {
+        margin-top: 70px;
+    }
 }
 
 /* Media query for mobile-friendly styles */
@@ -520,6 +589,23 @@ li{
         z-index: 3;
     }
 
+    .imgdesc{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 20px;
+        margin-top: 0px;
+    }
+
+    .img{
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .desc{
+        grid-area: 2 / 1 / 3 / 2; 
+    }
+
     img{
         width: 70%;
         border-radius: 50%;
@@ -538,7 +624,7 @@ li{
         font-size: 20px;
         width: 90%;
         position: absolute;
-        top: 320px; /* Position the element at the middle of the container */
+        margin-top: 320px;
         padding-bottom: 20px;
         line-height: 1.5;
     }    
@@ -604,7 +690,12 @@ li{
     }
     .about-content {
         flex-direction: column;
-        display: grid;
+        display: bo;
+        background-color: none;
+    }
+
+    .education img{
+        display: none;
     }
 
     .education,
@@ -613,6 +704,10 @@ li{
         width: 115%;
         justify-content: center;
         align-items: center; /* Center vertically */
+        box-shadow: none;
+        border-radius: 0px;
+        border: none;
+        background-color: #f9ecdb;
     }
 
     ul, li{
@@ -636,31 +731,19 @@ li{
         display: none; /* Hide the interval on mobile */
     }
     .topic{
-        font-size: 20px;
+        font-size: 28px;
         margin-bottom: 10px;
+        text-align: left;
+        text-decoration: underline;
+    }
+    h3{
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
     }
     .resume h2 {
         font-size: 28px;
         font-family: 'NanumB', sans-serif;
         animation: slideInFromLeft 1s ease; 
-    }
-}
-
-/* Styles for tablets (screen sizes between 768px and 1023px) */
-@media (min-width: 768px) and (max-width: 1080px) {
-    nav {
-        width: 100%;
-    }    
-
-    .contact-icons {
-        margin-top: 0px;
-    }    
-
-    img{
-        margin-top: 120px;
-    }
-    
-    .resume {
-        margin-top: 70px;
     }
 }
