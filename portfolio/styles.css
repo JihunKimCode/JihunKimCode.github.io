@@ -695,10 +695,6 @@ text-align: right;
         background-color: none;
     }
 
-    .education img{
-        display: none;
-    }
-
     .education,
     .skills {
         display: grid;
@@ -709,6 +705,7 @@ text-align: right;
         border-radius: 0px;
         border: none;
         background-color: #f9ecdb;
+        position:relative;
     }
 
     ul, li{
@@ -724,7 +721,7 @@ text-align: right;
     }
 
     .education .image-container {
-        display: none;
+        position: relative;
         margin-bottom: 0px;
     }
 
