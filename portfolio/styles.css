@@ -753,6 +753,7 @@ li{
     }
 
     .education .image-container {
+        width: 100%;
         position: relative;
         margin-bottom: 0px;
     }
