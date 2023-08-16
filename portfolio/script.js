@@ -34,6 +34,7 @@ function hideSectionsExcept(sectionId) {
 
 // Function to show the selected section with fade-in and fade-out animations
 function showSection(sectionId) {
+    window.scrollTo(0, 0);
     hideSectionsExcept(sectionId);
 }
 
@@ -199,3 +200,6 @@ window.addEventListener("scroll", handleHeaderColorChange);
 // Call the handler initially to set the initial header color
 handleHeaderColorChange();
 
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}

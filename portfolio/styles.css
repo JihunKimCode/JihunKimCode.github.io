@@ -747,6 +747,9 @@ li{
         left: 0%;
         width: 90%;
         font-size: 18px;
+        position: relative;
+        margin-right: 0px;
+        align-items: start;
     }
 
     .education .image-container {
@@ -788,14 +791,14 @@ li{
         padding: 0 10px;
         position: absolute;
         top: 50%;
-        left: 60%;
+        left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1;
         font-size: 28px;
     }
 
     .sect-line {
-        width: 120%;
+        width: 100%;
         border: none;
         border-top: 2px solid #000;
         margin: 0;
