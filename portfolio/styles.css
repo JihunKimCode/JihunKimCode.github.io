@@ -661,6 +661,7 @@ li{
     
     /* Logo centered on top for mobile devices */
     .logo {
+        width: auto;
         top: 5px;
         z-index: 3; /* Ensure the icons appear above other elements */
     
@@ -678,7 +679,7 @@ li{
         background-color: rgba(255, 255, 255, 0.8);
         box-shadow: none;
         float: right;
-        animation: slideInFromRight 1s ease; 
+        animation: none; 
     }
 
     .icons {
@@ -787,14 +788,14 @@ li{
         padding: 0 10px;
         position: absolute;
         top: 50%;
-        left: 50%;
+        left: 60%;
         transform: translate(-50%, -50%);
         z-index: 1;
         font-size: 28px;
     }
 
     .sect-line {
-        width: 100%;
+        width: 120%;
         border: none;
         border-top: 2px solid #000;
         margin: 0;
