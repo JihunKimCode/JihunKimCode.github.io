@@ -1,5 +1,9 @@
 let isAnimating = false;
-
+// ==========================
+// |                        |
+// |        Section         |
+// |                        |
+// ==========================
 // Function to hide all sections except the one with the given ID
 function hideSectionsExcept(sectionId) {
     if (isAnimating) return; // Exit if an animation is already in progress
@@ -85,12 +89,11 @@ showCurrentSectionFromHash();
 // Update the content when the URL hash changes (e.g., when switching to another tab)
 window.addEventListener("hashchange", showCurrentSectionFromHash);
 
-// Toggle the menu button
-document.getElementById("menuBtn").addEventListener("click", () => {
-    const nav = document.querySelector("nav");
-    nav.classList.toggle("show");
-});
-
+// ==========================
+// |                        |
+// |      Fade In/Out       |
+// |                        |
+// ==========================
 // Helper function for fade-in animation
 function fadeIn(element) {
     element.style.opacity = 0;
@@ -132,6 +135,18 @@ function fadeOut(element) {
     requestAnimationFrame(animate);
 }
 
+// ==========================
+// |                        |
+// |      Menu Button       |
+// |                        |
+// ==========================
+// Toggle the menu button
+document.getElementById("menuBtn").addEventListener("click", () => {
+    const nav = document.querySelector("nav");
+    nav.classList.toggle("show");
+});
+
+
 // Toggle the menu button
 document.getElementById("menuBtn").addEventListener("click", () => {
     const nav = document.querySelector("nav");
@@ -141,6 +156,11 @@ document.getElementById("menuBtn").addEventListener("click", () => {
     overlay.classList.toggle("overlay-visible");
 });
 
+// ==========================
+// |                        |
+// |   Head Color Changer   |
+// |                        |
+// ==========================
 // Function to handle header color change on scroll for mobile
 function handleHeaderColorChange() {
     const header = document.querySelector("header");
@@ -178,3 +198,4 @@ window.addEventListener("scroll", handleHeaderColorChange);
 
 // Call the handler initially to set the initial header color
 handleHeaderColorChange();
+

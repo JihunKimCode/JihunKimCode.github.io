@@ -189,7 +189,6 @@ desc{
         transform: translateX(0);
     }
 }   
-
 .icons {
     display: flex;
     justify-content: flex-end; /* Align the icons to the right side */
@@ -411,6 +410,10 @@ name a {
     line-height: 1.5;
 }
 
+.skills h3{
+    text-decoration: underline;
+}
+
 .education .image-container {
     display: flex;
     justify-content: center;
@@ -458,13 +461,41 @@ li{
 }
 
 .desc h3{
-font-size: 32px;
-text-align: center;
+    font-size: 32px;
+    text-align: center;
+    /* color: #846d62; */
 }
 
 .desc p{
-font-style: italic;
-text-align: right;
+    font-style: italic;
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.desc a{
+    color: black;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.img img{
+    display: table-cell;
+    width: 100%;
+    border: solid #846d62;
+    border-width: 5px;
+    border-radius: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2),0 20px 20px 0 rgba(0,0,0,0.2);
+    float: left;
+    animation: slideInFromLeft 1s ease; 
+}
+
+.sect {
+    display: none;
 }
   
 /* Styles for tablets (screen sizes between 768px and 1023px) */
@@ -589,14 +620,12 @@ text-align: right;
 
     .img{
         display: flex;
-        flex-wrap: wrap;
         width: 100%;
         order: 1;
     }
 
     .desc{
         display: flex;
-        flex-wrap: wrap;
         width: 100%;
         order: 2;
     }
@@ -698,7 +727,7 @@ text-align: right;
     .education,
     .skills {
         display: grid;
-        width: 115%;
+        width: 100%;
         justify-content: center;
         align-items: center; /* Center vertically */
         box-shadow: none;
@@ -714,10 +743,9 @@ text-align: right;
     }
 
     .resume {
+        left: 0%;
         width: 90%;
-        align-items: flex-start;
         font-size: 18px;
-        margin-left: 22px;
     }
 
     .education .image-container {
@@ -729,12 +757,13 @@ text-align: right;
         display: none; /* Hide the interval on mobile */
     }
     .topic{
+        display: none;
         font-size: 28px;
         margin-bottom: 10px;
         text-align: left;
         text-decoration: underline;
     }
-    h3{
+    .skills h3{
         font-size: 20px;
         margin: 0;
         padding: 0;
@@ -743,5 +772,31 @@ text-align: right;
         font-size: 28px;
         font-family: 'NanumB', sans-serif;
         animation: slideInFromLeft 1s ease; 
+    }
+
+    .sect{
+        text-align: center;
+        position: relative;
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .sect-text {
+        background-color: #f9ecdb;
+        padding: 0 10px;
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        font-size: 28px;
+    }
+
+    .sect-line {
+        width: 120%;
+        border: none;
+        border-top: 2px solid #000;
+        margin: 0;
     }
 }
