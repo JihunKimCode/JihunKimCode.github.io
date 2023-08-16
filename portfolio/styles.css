@@ -457,23 +457,19 @@ li{
     font-size: 20px;
 }
 
-/* Common styles */
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .description {
-    flex: 1;
-    margin-left: 20px;
-  }
+.desc h3{
+font-size: 32px;
+text-align: center;
+}
+
+.desc p{
+font-style: italic;
+text-align: right;
+}
+
+.experience-container{
+    flex-direction: ;
+}
   
 /* Styles for tablets (screen sizes between 768px and 1023px) */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -590,44 +586,52 @@ li{
     }
 
     .imgdesc{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
         margin-top: 0px;
     }
 
     .img{
-        grid-area: 1 / 1 / 2 / 2;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
     }
 
     .desc{
-        grid-area: 2 / 1 / 3 / 2; 
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
     }
 
     img{
+        width: 100%;
+        border-radius: 50%;
+        position: relative;
+        margin-top: 40px;
+    }
+
+    .biglogo img{
         width: 70%;
         border-radius: 50%;
         position: absolute;
         margin-top: 40px;
-        z-index: -1;
     }
+
+    desc{
+        font-family: 'NanumB', sans-serif;
+        font-size: 20px;
+        width: 100%;
+        position: relative;
+        /* margin-top: 320px; */
+        padding-bottom: 20px;
+        line-height: 1.5;
+    }    
     
     h2 {
         font-size: 32px;
         width: 90%;
     }
     
-    desc{
-        font-family: 'NanumB', sans-serif;
-        font-size: 20px;
-        width: 90%;
-        position: absolute;
-        margin-top: 320px;
-        padding-bottom: 20px;
-        line-height: 1.5;
-    }    
     /* Logo centered on top for mobile devices */
     .logo {
         top: 5px;
@@ -637,7 +641,7 @@ li{
         justify-content: flex-end; /* Align the icons to the right side */
         /* margin-top: 20px; */
         position: fixed;
-        right: 17%;
+        right: 5%;
         z-index: 2; /* Ensure the icons appear above other elements */
     }
 
@@ -688,9 +692,8 @@ li{
         font-size: 20px;
         margin-top: 10px;
     }
-    .about-content {
+    .about-content{
         flex-direction: column;
-        display: bo;
         background-color: none;
     }
 
