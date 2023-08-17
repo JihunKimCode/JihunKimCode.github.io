@@ -165,7 +165,7 @@ desc{
     width: 100%;
     float: right;
     font-family: 'NanumB', sans-serif;
-    font-size: 28px;
+    font-size: 24px;
     line-height: 1.5;
     animation: slideInFromRight 1s ease; 
 }
@@ -522,7 +522,7 @@ li{
   line-height: normal;
   margin: 0px;
 
-  height: 40px;
+  height: 35px;
   padding-top: 3px;
   padding-bottom: 3px;
 
@@ -537,7 +537,7 @@ li{
   pointer-events: none;
 }
 
-.button:hover, .buttons a:hover{
+.button:hover{
   color: #fff;
   background-color: #1A1A1A;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
