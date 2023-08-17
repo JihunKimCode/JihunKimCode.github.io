@@ -1,6 +1,9 @@
 body {
     font-family: Arial, sans-serif;
     width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
@@ -34,8 +37,11 @@ button {
     grid-template-columns: repeat(var(--cols, 8), 50px); /* Added default value for --cols */
     gap: 2px;
     border: 1px solid #ccc;
-    width: fit-content; /* Added to fit the grid to its contents */
-    margin: 20px auto; /* Center align the board */
+    width: 100%; /* Added to fit the grid to its contents */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .square {
@@ -89,4 +95,18 @@ button {
 
 .github-icon:hover{
     color: white;
+}
+
+@media (max-width: 767px) {
+    body{
+        width: 95%;
+    }
+
+    .github-icon {
+        right: 3%;
+    }
+    #board{
+        padding: 0;
+        margin-bottom: 0px;
+    }
 }

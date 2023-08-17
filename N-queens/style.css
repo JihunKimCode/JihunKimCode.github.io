@@ -1,6 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     margin: 30px;
     width: 100%;
 }
@@ -8,6 +10,9 @@ body {
 h1 {
     width: 100%;
     margin-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 label {
@@ -34,6 +39,7 @@ button {
     grid-template-columns: repeat(var(--size), 40px);
     margin: 20px auto; /* Center the board horizontally */
     justify-content: center; /* Center the grid items horizontally within the grid */
+    align-items: center;
 }
 
 .cell {
@@ -57,6 +63,7 @@ button {
     border-radius: 8px;
     border-width: 5px;
     justify-content: center;
+    align-items: center;
 }
 
 .github-icon {
@@ -80,4 +87,18 @@ button {
 
 .github-icon:hover{
     color: white;
+}
+
+@media (max-width: 767px) {
+    body{
+        width: 90%;
+    }
+    .github-icon {
+        margin-left: 0px;
+        margin-right: auto;
+        align-items: start;
+        justify-content: start;
+        left: auto;
+        right: 3%;
+    }
 }
