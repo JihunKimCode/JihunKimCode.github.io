@@ -190,9 +190,14 @@ function handleHeaderColorChange() {
         document.querySelectorAll("name a").forEach((link) => {
             link.style.color = "#846d62"; // Restore the initial color
         });   
-
     }
 }
+
+// ==========================
+// |                        |
+// |   Scroll up methods    |
+// |                        |
+// ==========================
 
 // Listen for the scroll event and handle header color change
 window.addEventListener("scroll", handleHeaderColorChange);

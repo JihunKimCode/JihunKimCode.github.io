@@ -11,7 +11,7 @@
     font-weight: normal;
     font-style: normal;
 }
-/* Add your desktop-friendly styles here */
+
 body {
     width: 100%;
     margin: 0;
@@ -21,8 +21,7 @@ body {
 }
 
 header {
-    /* background-color: #57b5dc; */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
     color: #fff;
     padding: 10px;
     justify-content: center;
@@ -42,9 +41,7 @@ section{
 }
 
 nav {
-    /* background-color: #57b5dc; */
     color: #a8a29c;
-    /* padding: 10px; */
     width: 80%;
     display: flex;
     justify-content: center;
@@ -84,7 +81,7 @@ nav.menu-hidden {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
     z-index: 100; /* Set a higher z-index to make sure the overlay appears above the content */
     display: none; /* Hide the overlay by default */
 }
@@ -128,7 +125,7 @@ section:not(:first-of-type) {
 
 .imgdesc{
     display: table;
-    margin-top: 100px;
+    margin-top: 40px;
 }
 
 .img{
@@ -192,7 +189,6 @@ desc{
 .icons {
     display: flex;
     justify-content: flex-end; /* Align the icons to the right side */
-    /* margin-top: 20px; */
     position: fixed;
     top: 10px;
     right: 20px;
@@ -251,7 +247,7 @@ name {
 
 a {
     text-decoration: none; /* Remove the underline */
-    color: #846d62; /* Set the text color to #846d62 */
+    color: #846d62;
 }
 
 /* Style for hovered hyperlink text (anchors) */
@@ -261,7 +257,7 @@ a:hover {
 
 name a {
     text-decoration: none; /* Remove the underline */
-    color: #846d62; /* Set the text color to #846d62 */
+    color: #846d62;
 }
 
 .logo {
@@ -463,7 +459,6 @@ li{
 .desc h3{
     font-size: 32px;
     text-align: center;
-    /* color: #846d62; */
 }
 
 .desc p{
@@ -486,11 +481,12 @@ li{
 }
 
 .img img{
+    margin-top: 40px;
     display: table-cell;
     width: 100%;
     border: solid #846d62;
     border-width: 5px;
-    border-radius: 50px;
+    border-radius: 30px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -510,67 +506,107 @@ li{
 }
 
 .button{
-  background-color: transparent;
-  border: 2px solid #000;
-  border-radius: 15px;
-  box-sizing: border-box;
-  color: #000;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: normal;
-  margin: 0px;
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0px;
 
-  height: 35px;
-  padding-top: 3px;
-  padding-bottom: 3px;
+    height: 35px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 
-  text-align: center;
-  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-  touch-action: manipulation;
-  will-change: transform;
-  vertical-align: baseline;
+    text-align: center;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    touch-action: manipulation;
+    will-change: transform;
+    vertical-align: baseline;
 }
 
 .button:disabled {
-  pointer-events: none;
+    pointer-events: none;
 }
 
 .button:hover{
-  color: #fff;
-  background-color: #1A1A1A;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-  transform: translateY(-2px);
+    color: #fff;
+    background-color: #000;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
 }
 
 .button:active {
-  box-shadow: none;
-  transform: translateY(0);
+    box-shadow: none;
+    transform: translateY(0);
 }
 
 .buttons a{
     text-decoration: none;
 }
+.projsect{
+    text-align: center;
+    position: relative;
+    display: block;
+    margin-top: 80px;
+}
+
+.projsect-text {
+    background-color: #f9ecdb;
+    padding: 0 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 28px;
+}
+
+.projsect-line {
+    width: 100%;
+    border: none;
+    border-top: 2px solid #000;
+}
 
 /* Styles for tablets (screen sizes between 768px and 1023px) */
 @media (min-width: 768px) and (max-width: 1024px) {
+    .projsect{
+        margin-top: 140px;
+    }
+
     .imgdesc{
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
     }
-    
+
     .img{
-        width: 80%;
-        grid-area: 1 / 1 / 3 / 6; 
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        order: 1;
+        margin-top: 0px;
     }
-    
+
+    .img img{
+        border-width: 3px;
+    }
+
     .desc{
-        width: 80%;
-        grid-area: 3 / 1 / 5 / 6;
+        display: flex;
+        width: 100%;
+        order: 2;
+    }
+
+    img{
+        width: 100%;
+        border-radius: 50%;
+        position: relative;
+        /* margin-top: 40px; */
     }
         
     nav {
@@ -614,8 +650,6 @@ li{
         color:  #846d62;
         background-color: #f9ecdb;
         cursor: pointer;
-        /* padding: 10px; */
-        /* position: fixed; */
     }
     
     /* Position the menu container */
@@ -670,13 +704,18 @@ li{
     .imgdesc{
         display: flex;
         flex-wrap: wrap;
-        margin-top: 0px;
+        margin-top: 20px;
     }
 
     .img{
         display: flex;
+        flex-direction: column;
         width: 100%;
         order: 1;
+    }
+
+    .img img{
+        border-width: 3px;
     }
 
     .desc{
@@ -689,7 +728,7 @@ li{
         width: 100%;
         border-radius: 50%;
         position: relative;
-        margin-top: 40px;
+        /* margin-top: 40px; */
     }
 
     .biglogo img{
@@ -858,5 +897,16 @@ li{
         border: none;
         border-top: 2px solid #000;
         margin: 0;
+    }
+
+    .projsect{
+        text-align: center;
+        position: relative;
+        display: block;
+        margin-top: 60px;
+    }
+    
+    .projsect-text {
+        font-size: 24px;
     }
 }
