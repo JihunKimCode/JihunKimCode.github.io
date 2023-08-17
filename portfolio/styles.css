@@ -205,6 +205,13 @@ desc{
 
 .icons a:hover{
     color: white;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2),0 20px 20px 0 rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+}
+
+.icons a:active {
+    box-shadow: none;
+    transform: translateY(0);
 }
 
 .btn {
@@ -372,6 +379,13 @@ name a {
 
 .btn-resume:hover {
     background-color: #5c4c41;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2),0 20px 20px 0 rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+}
+
+.btn-resume:active {
+    box-shadow: none;
+    transform: translateY(0);
 }
 
 .about-content {
@@ -529,14 +543,10 @@ li{
     vertical-align: baseline;
 }
 
-.button:disabled {
-    pointer-events: none;
-}
-
 .button:hover{
     color: #fff;
     background-color: #000;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2),0 10px 10px 0 rgba(0,0,0,0.2);
     transform: translateY(-2px);
 }
 
