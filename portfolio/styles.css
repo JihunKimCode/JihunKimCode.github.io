@@ -589,7 +589,7 @@ li{
     .imgdesc{
         display: flex;
         flex-wrap: wrap;
-        margin-top: 20px;
+        margin-top: 80px;
     }
 
     .img{
@@ -614,7 +614,7 @@ li{
         width: 100%;
         border-radius: 50%;
         position: relative;
-        /* margin-top: 40px; */
+        margin-top: 40px;
     }
         
     nav {
