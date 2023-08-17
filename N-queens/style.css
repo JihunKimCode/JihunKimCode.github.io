@@ -98,7 +98,7 @@ button {
         margin-right: auto;
         align-items: start;
         justify-content: start;
-        left: auto;
-        right: 3%;
+        left: 3%;
+        right: auto;
     }
 }

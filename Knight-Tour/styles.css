@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    width: auto;
     margin: 0 auto;
     padding: 20px;
     text-align: center; /* Center align the contents */
@@ -41,7 +41,6 @@ button {
     text-align: center;
     justify-content: center;
     align-items: center;
-
 }
 
 .square {
@@ -108,5 +107,13 @@ button {
     #board{
         padding: 0;
         margin-bottom: 0px;
+        grid-template-columns: repeat(var(--cols, 8), 30px); /* Added default value for --cols */
+        border: 1px solid #ccc;
+        width: 100%; /* Added to fit the grid to its contents */
+    }
+    
+    .square {
+        width: 30px;
+        height: 30px;
     }
 }
