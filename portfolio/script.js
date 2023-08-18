@@ -162,36 +162,67 @@ document.getElementById("menuBtn").addEventListener("click", () => {
 // |   Head Color Changer   |
 // |                        |
 // ==========================
-// Function to handle header color change on scroll for mobile
 function handleHeaderColorChange() {
     const header = document.querySelector("header");
+    const menuBtn = document.querySelector("#menuBtn");
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     // Define the scroll threshold at which the color change occurs
     const scrollThreshold = 30;
 
-    // Apply a different background color when the user scrolls down
+    // Define colors for light mode and dark mode
+    const lightModeColors = {
+        bright: "#f9ecdb",
+        dark: "#846d62",
+    };
+
+    const darkModeColors = {
+        bright: "#5c4c41",
+        dark: "#2f261a"
+    };
+
+    // Assume you're using the matchMedia approach
+    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const isDarkModeEnabled = darkModeMediaQuery.matches;
+
     if (scrollTop > scrollThreshold) {
-        header.style.backgroundColor = "#846d62"; // Change the color as needed
-        menuBtn.style.backgroundColor = "#846d62"
-        menuBtn.style.color = "#f9ecdb"
+        header.style.backgroundColor = isDarkModeEnabled
+            ? darkModeColors.bright
+            : lightModeColors.dark;
+        menuBtn.style.backgroundColor = isDarkModeEnabled
+            ? darkModeColors.bright
+            : lightModeColors.dark;
+        menuBtn.style.color = isDarkModeEnabled
+            ? darkModeColors.dark
+            : lightModeColors.bright;
 
-        // Change the style of anchor elements (menu links)
-        document.querySelectorAll("name a").forEach((link) => {
-            link.style.color = "#f9ecdb"; // Change the color as needed
+        document.querySelectorAll(".name a").forEach((link) => {
+            link.style.color = isDarkModeEnabled
+                ? darkModeColors.dark
+                : lightModeColors.bright;
         });
-
     } else {
-        header.style.backgroundColor = "#f9ecdb"; // Initial color
-        menuBtn.style.backgroundColor = "#f9ecdb"
-        menuBtn.style.color = "#846d62"
+        header.style.backgroundColor = isDarkModeEnabled
+            ? darkModeColors.dark
+            : lightModeColors.bright;
+        menuBtn.style.backgroundColor = isDarkModeEnabled
+            ? darkModeColors.dark
+            : lightModeColors.bright;
+        menuBtn.style.color = isDarkModeEnabled
+            ? darkModeColors.bright
+            : lightModeColors.dark;
 
-        // Restore the initial style of anchor elements (menu links)
-        document.querySelectorAll("name a").forEach((link) => {
-            link.style.color = "#846d62"; // Restore the initial color
-        });   
+        document.querySelectorAll(".name a").forEach((link) => {
+            link.style.color = isDarkModeEnabled
+                ? darkModeColors.bright
+                : lightModeColors.dark;
+        });
     }
 }
+
+// Call the function initially and add a scroll event listener
+handleHeaderColorChange();
+window.addEventListener("scroll", handleHeaderColorChange);
 
 // ==========================
 // |                        |
@@ -199,11 +230,6 @@ function handleHeaderColorChange() {
 // |                        |
 // ==========================
 
-// Listen for the scroll event and handle header color change
-window.addEventListener("scroll", handleHeaderColorChange);
-
-// Call the handler initially to set the initial header color
-handleHeaderColorChange();
 
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
