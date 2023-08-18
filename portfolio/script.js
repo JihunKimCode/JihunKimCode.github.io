@@ -168,7 +168,7 @@ function handleHeaderColorChange() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     // Define the scroll threshold at which the color change occurs
-    const scrollThreshold = 100;
+    const scrollThreshold = 30;
 
     // Apply a different background color when the user scrolls down
     if (scrollTop > scrollThreshold) {
