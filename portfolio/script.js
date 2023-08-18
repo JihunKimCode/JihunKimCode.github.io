@@ -174,11 +174,13 @@ function handleHeaderColorChange() {
     const lightModeColors = {
         bright: "#f9ecdb",
         dark: "#846d62",
+        name: "#af9b8e"
     };
 
     const darkModeColors = {
         bright: "#5c4c41",
-        dark: "#2f261a"
+        dark: "#2f261a",
+        name: "#af9b8e"
     };
 
     // Assume you're using the matchMedia approach
@@ -193,12 +195,12 @@ function handleHeaderColorChange() {
             ? darkModeColors.bright
             : lightModeColors.dark;
         menuBtn.style.color = isDarkModeEnabled
-            ? darkModeColors.dark
+            ? darkModeColors.name
             : lightModeColors.bright;
 
-        document.querySelectorAll(".name a").forEach((link) => {
+        document.querySelectorAll("name a").forEach((link) => {
             link.style.color = isDarkModeEnabled
-                ? darkModeColors.dark
+                ? darkModeColors.name
                 : lightModeColors.bright;
         });
     } else {
@@ -209,12 +211,12 @@ function handleHeaderColorChange() {
             ? darkModeColors.dark
             : lightModeColors.bright;
         menuBtn.style.color = isDarkModeEnabled
-            ? darkModeColors.bright
+            ? darkModeColors.name
             : lightModeColors.dark;
 
-        document.querySelectorAll(".name a").forEach((link) => {
+        document.querySelectorAll("name a").forEach((link) => {
             link.style.color = isDarkModeEnabled
-                ? darkModeColors.bright
+                ? darkModeColors.name
                 : lightModeColors.dark;
         });
     }

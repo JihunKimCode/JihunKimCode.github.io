@@ -12,15 +12,34 @@
     font-style: normal;
 }
 
-:root{
-    --background: #f9ecdb;
-    --white: #fff;
-    --grey: #a8a29c;
-    --section: #af9b8e;
-    --overlay: rgba(0, 0, 0, 0.7);
-    --imgborder: #846d62;
-    --icon: rgb(228, 228, 228);
-    --resume: #5c4c41;
+@media (prefers-color-scheme: light){
+    :root{
+        --background: #f9ecdb;
+        --white: #fff;
+        --grey: #a8a29c;
+        --section: #af9b8e;
+        --overlay: rgba(0, 0, 0, 0.7);
+        --imgborder: #846d62;
+        --icon: rgb(228, 228, 228);
+        --resume: #5c4c41;
+        --text: #000;
+        --buttonhov: #fff;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root{
+        --background: #2f261a;
+        --white: #fff;
+        --grey: #a8a29c;
+        --section: #846d62;
+        --overlay: rgba(0, 0, 0, 0.7);
+        --imgborder: #5c4c41;
+        --icon: rgb(228, 228, 228);
+        --resume: #5c4c41;
+        --text: rgb(228, 228, 228);
+        --buttonhov: #000;
+    }
 }
 
 body {
@@ -28,13 +47,12 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: #f9ecdb;
+    background-color: var(--background);
     font-family: 'NanumS', sans-serif;
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
-    color: #fff;
+    color: var(--white);
     padding: 5px;
     justify-content: center;
     text-align: center;
@@ -45,7 +63,7 @@ header {
 
 section{
     width: 100%;
-    background-color: #f9ecdb;
+    background-color: var(--background);
 }
 #menuBtn {
     display: none;
@@ -63,7 +81,7 @@ nav {
     margin-top: 5px;
 }
 nav a {
-    color:#a8a29c;
+    color: #a8a29c;
     font-size: 28px;
     text-decoration: none;
     margin-right: 10px;
@@ -155,7 +173,7 @@ section:not(:first-of-type) {
 img{
     display: table-cell;
     width: 100%;
-    border: solid #846d62;
+    border: solid var(--imgborder);
     border-width: 15px;
     border-radius: 50%;
     background-size: contain;
@@ -179,7 +197,8 @@ desc{
     font-family: 'NanumB', sans-serif;
     font-size: 24px;
     line-height: 1.5;
-    animation: slideInFromRight 1s ease; 
+    animation: slideInFromRight 1s ease;
+    color: var(--text);
 }
 
 /* Define the animation for the image coming from the left */
@@ -363,7 +382,7 @@ name a {
     justify-content: center;
     /* margin-top: 10px; */
     cursor: pointer;
-    color: black;
+    color: var(--text);
     vertical-align: middle;
     animation: slideInFromRight 1s ease; 
 }
@@ -373,7 +392,7 @@ name a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f9ecdb;
+    background-color: var(--background);
     padding: 40px 0;
 }
 
@@ -393,8 +412,8 @@ name a {
 .btn-resume {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #846d62;
-    color: #fff;
+    background-color: var(--imgborder);
+    color: var(--white);
     text-decoration: none;
     border: none;
     border-radius: 4px;
@@ -405,7 +424,7 @@ name a {
 }
 
 .btn-resume:hover {
-    background-color: #5c4c41;
+    background-color: var(--resume);
     box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2),0 20px 20px 0 rgba(0,0,0,0.2);
     transform: translateY(-2px);
 }
@@ -428,23 +447,25 @@ name a {
     display: table-cell;
     width: 49%;
     padding: 10px;
-    background-color: #AF9B8E;
+    background-color: var(--section);
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin-bottom: 20px;
     animation: slideInFromLeft 1s ease; 
+    color: var(--text);
 }
 
 .skills{
     display: table-cell;
     width: 49%;
     padding: 15px;
-    background-color: #AF9B8E;
+    background-color: var(--section);
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin-bottom: 20px;
     animation: slideInFromRight 1s ease; 
     line-height: 1.5;
+    color: var(--text);
 }
 
 .skills h3{
@@ -511,7 +532,7 @@ li{
 }
 
 .desc a{
-    color: black;
+    color: var(--text);
     text-decoration: underline;
     font-weight: bold;
 }
@@ -525,13 +546,12 @@ li{
     margin-top: 40px;
     display: table-cell;
     width: 100%;
-    border: solid #846d62;
+    border: solid var(--imgborder);
     border-width: 5px;
     border-radius: 30px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2),0 20px 20px 0 rgba(0,0,0,0.2);
     float: left;
     animation: slideInFromLeft 1s ease; 
@@ -547,12 +567,12 @@ li{
 }
 
 .button{
-    border: 2px solid #000;
+    border: 2px solid var(--text);
     border-radius: 30px;
     box-sizing: border-box;
     
     background-color: transparent;
-    color: #000;
+    color: var(--text);
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
@@ -567,8 +587,8 @@ li{
 }
 
 .button:hover{
-    color: #fff;
-    background-color: #000;
+    color: var(--buttonhov);
+    background-color: var(--text);
     box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2),0 10px 10px 0 rgba(0,0,0,0.2);
     transform: translateY(-2px);
 }
@@ -589,7 +609,7 @@ li{
 }
 
 .projsect-text {
-    background-color: #f9ecdb;
+    background-color: var(--background);
     padding: 0 10px;
     position: absolute;
     top: 50%;
@@ -597,17 +617,18 @@ li{
     transform: translate(-50%, -50%);
     z-index: 1;
     font-size: 28px;
+    color: var(--text);
 }
 
 .projsect-line {
     width: 100%;
     border: none;
-    border-top: 2px solid #000;
+    border-top: 2px solid var(--text);
 }
 
 footer {
-    background-color: #846d62;
-    color: #fff;
+    background-color: var(--imgborder);
+    color: var(--white);
     text-align: center;
     padding: 10px 0;
 }
@@ -690,7 +711,7 @@ button#backToTopBtn:hover {
 @media (max-width: 767px) {
     header{
         position: fixed;
-        background-color: #f9ecdb;
+        background-color: var(--background);
         height: 40px;
         padding: 10px;
     }
@@ -701,7 +722,7 @@ button#backToTopBtn:hover {
         border: none;
         font-size: 24px;
         color:  #846d62;
-        background-color: #f9ecdb;
+        background-color: var(--background);
         cursor: pointer;
     }
     
@@ -822,7 +843,6 @@ button#backToTopBtn:hover {
     .logo img {
         width: 50px; /* Adjust the width of the logo image as needed */
         height: auto; /* Maintain the aspect ratio of the logo */
-        background-color: rgba(255, 255, 255, 0.8);
         box-shadow: none;
         float: right;
         animation: none; 
@@ -888,7 +908,7 @@ button#backToTopBtn:hover {
         box-shadow: none;
         border-radius: 0px;
         border: none;
-        background-color: #f9ecdb;
+        background-color: var(--background);
         position:relative;
     }
 
@@ -939,10 +959,11 @@ button#backToTopBtn:hover {
         display: block;
         margin-top: 20px;
         margin-bottom: 20px;
+        color: var(--text);
     }
     
     .sect-text {
-        background-color: #f9ecdb;
+        background-color: var(--background);
         padding: 0 10px;
         position: absolute;
         top: 50%;
@@ -955,7 +976,7 @@ button#backToTopBtn:hover {
     .sect-line {
         width: 100%;
         border: none;
-        border-top: 2px solid #000;
+        border-top: 2px solid var(--text);
         margin: 0;
     }
 
@@ -981,6 +1002,6 @@ button#backToTopBtn:hover {
     }
 
     .footicons .btn {
-        margin-right: 15px; /* Add margin between buttons */
+        margin-right: 15px;
     }
 }
