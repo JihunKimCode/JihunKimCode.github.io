@@ -18,7 +18,7 @@
         --white: #fff;
         --grey: #a8a29c;
         --section: #af9b8e;
-        --overlay: rgba(0, 0, 0, 0.7);
+        --overlay: rgba(0, 0, 0, 0.9);
         --imgborder: #846d62;
         --icon: rgb(228, 228, 228);
         --resume: #5c4c41;
@@ -27,13 +27,13 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark){
     :root{
         --background: #2f261a;
         --white: #fff;
         --grey: #a8a29c;
-        --section: #846d62;
-        --overlay: rgba(0, 0, 0, 0.7);
+        --section: #5c4c41;
+        --overlay: rgba(0, 0, 0, 0.9);
         --imgborder: #5c4c41;
         --icon: rgb(228, 228, 228);
         --resume: #5c4c41;
@@ -113,7 +113,7 @@ nav.menu-hidden {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+    background-color: var(--overlay); /* Semi-transparent black overlay */
     z-index: 100; /* Set a higher z-index to make sure the overlay appears above the content */
     display: none; /* Hide the overlay by default */
 }
@@ -265,21 +265,21 @@ desc{
     text-decoration: none;
 }
 
-/* Style for the LinkedIn button */
 .btn.btn-linkedin {
     background-color: #0A66C2;
     padding: 6px 6px 6px 6px;
-
 }
 
-/* Style for the GitHub button */
 .btn.btn-github {
     background-color: #000000;
 }
 
-/* Style for the Email button */
 .btn.btn-email {
     background-color: #EA4335;
+}
+
+.btn.btn-dark {
+    background-color: #000;
 }
 
 name {
@@ -733,7 +733,7 @@ button#backToTopBtn:hover {
         top: 50px; /* Adjust this value to control the vertical position of the menu */
         width: 95%;
         text-align: center;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: var(--overlay);
         z-index: 2;
         display: none; /* Hide the menu by default */
     }

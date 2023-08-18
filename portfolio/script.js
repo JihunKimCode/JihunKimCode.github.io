@@ -187,39 +187,35 @@ function handleHeaderColorChange() {
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const isDarkModeEnabled = darkModeMediaQuery.matches;
 
-    if (scrollTop > scrollThreshold) {
-        header.style.backgroundColor = isDarkModeEnabled
-            ? darkModeColors.bright
-            : lightModeColors.dark;
-        menuBtn.style.backgroundColor = isDarkModeEnabled
-            ? darkModeColors.bright
-            : lightModeColors.dark;
-        menuBtn.style.color = isDarkModeEnabled
-            ? darkModeColors.name
-            : lightModeColors.bright;
+    const targetHeaderColor = scrollTop > scrollThreshold
+        ? (isDarkModeEnabled ? darkModeColors.bright : lightModeColors.dark)
+        : (isDarkModeEnabled ? darkModeColors.dark : lightModeColors.bright);
 
-        document.querySelectorAll("name a").forEach((link) => {
-            link.style.color = isDarkModeEnabled
-                ? darkModeColors.name
-                : lightModeColors.bright;
-        });
-    } else {
-        header.style.backgroundColor = isDarkModeEnabled
-            ? darkModeColors.dark
-            : lightModeColors.bright;
-        menuBtn.style.backgroundColor = isDarkModeEnabled
-            ? darkModeColors.dark
-            : lightModeColors.bright;
-        menuBtn.style.color = isDarkModeEnabled
-            ? darkModeColors.name
-            : lightModeColors.dark;
+    const targetBtnBgColor = scrollTop > scrollThreshold
+        ? (isDarkModeEnabled ? darkModeColors.bright : lightModeColors.dark)
+        : (isDarkModeEnabled ? darkModeColors.dark : lightModeColors.bright);
 
-        document.querySelectorAll("name a").forEach((link) => {
-            link.style.color = isDarkModeEnabled
-                ? darkModeColors.name
-                : lightModeColors.dark;
-        });
-    }
+    const targetBtnTextColor = scrollTop > scrollThreshold
+        ? (isDarkModeEnabled ? darkModeColors.name : lightModeColors.bright)
+        : (isDarkModeEnabled ? darkModeColors.name : lightModeColors.dark);
+
+    const targetLinkColor = scrollTop > scrollThreshold
+        ? (isDarkModeEnabled ? darkModeColors.name : lightModeColors.bright)
+        : (isDarkModeEnabled ? darkModeColors.name : lightModeColors.dark);
+
+    header.style.transition = "background-color 0.3s ease";
+    menuBtn.style.transition = "background-color 0.3s ease, color 0.3s ease";
+    document.querySelectorAll("name a").forEach(link => {
+        link.style.transition = "color 0.3s ease";
+    });
+
+    header.style.backgroundColor = targetHeaderColor;
+    menuBtn.style.backgroundColor = targetBtnBgColor;
+    menuBtn.style.color = targetBtnTextColor;
+
+    document.querySelectorAll("name a").forEach(link => {
+        link.style.color = targetLinkColor;
+    });
 }
 
 // Call the function initially and add a scroll event listener
