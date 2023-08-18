@@ -208,3 +208,12 @@ handleHeaderColorChange();
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 }
+
+const backToTopButton = document.getElementById("backToTopBtn");
+
+backToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});

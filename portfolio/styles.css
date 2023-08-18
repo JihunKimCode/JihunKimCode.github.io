@@ -12,7 +12,19 @@
     font-style: normal;
 }
 
+:root{
+    --background: #f9ecdb;
+    --white: #fff;
+    --grey: #a8a29c;
+    --section: #af9b8e;
+    --overlay: rgba(0, 0, 0, 0.7);
+    --imgborder: #846d62;
+    --icon: rgb(228, 228, 228);
+    --resume: #5c4c41;
+}
+
 body {
+    display: block;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -23,7 +35,7 @@ body {
 header {
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
     color: #fff;
-    padding: 10px;
+    padding: 5px;
     justify-content: center;
     text-align: center;
     position: fixed;
@@ -127,7 +139,8 @@ section:not(:first-of-type) {
 
 .imgdesc{
     display: table;
-    margin-top: 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .img{
@@ -148,7 +161,6 @@ img{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2),0 20px 20px 0 rgba(0,0,0,0.2);
     float: left;
     animation: slideInFromLeft 1s ease; 
@@ -189,7 +201,7 @@ desc{
         transform: translateX(0);
     }
 }   
-.icons {
+.icons, .fticons {
     display: flex;
     justify-content: flex-end; /* Align the icons to the right side */
     position: fixed;
@@ -309,7 +321,6 @@ name a {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: rgba(255, 255, 255, 0.8);
     box-shadow: none;
     float: left;
     animation: slideInFromLeft 1s ease; 
@@ -594,6 +605,37 @@ li{
     border-top: 2px solid #000;
 }
 
+footer {
+    background-color: #846d62;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+button#backToTopBtn {
+    background-color: transparent;
+    color: rgb(228, 228, 228);
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+button#backToTopBtn:hover {
+    color: white;
+}
+
+.footicons{
+    display: none;
+}
+
 /* Styles for tablets (screen sizes between 768px and 1023px) */
 @media (min-width: 768px) and (max-width: 1024px) {
     .projsect{
@@ -650,18 +692,7 @@ li{
         position: fixed;
         background-color: #f9ecdb;
         height: 40px;
-        width: 100%;
-    }
-    body {
-        width: 100%;
-    }
-
-    section{
-        width: 100%;
-    }
-
-    main {
-        width: 100%;
+        padding: 10px;
     }
 
     /* Show the menu button and hide the menu initially */
@@ -851,7 +882,7 @@ li{
     .education,
     .skills {
         display: grid;
-        width: 100%;
+        width: fit-content;
         justify-content: center;
         align-items: center; /* Center vertically */
         box-shadow: none;
@@ -937,5 +968,19 @@ li{
     
     .projsect-text {
         font-size: 24px;
+    }
+
+    .footicons{
+        font-size: 32px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-top: 10px;
+        padding: 0 20px;
+        color: white;
+    }
+
+    .footicons .btn {
+        margin-right: 15px; /* Add margin between buttons */
     }
 }
