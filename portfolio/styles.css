@@ -777,16 +777,15 @@ li{
     
     /* Logo centered on top for mobile devices */
     .logo {
-        width: auto;
+        width: 100%;
         top: 5px;
         z-index: 3; /* Ensure the icons appear above other elements */
     
         display: flex;
-        justify-content: flex-end; /* Align the icons to the right side */
+        justify-content: flex-start;
         /* margin-top: 20px; */
         position: fixed;
-        right: 5%;
-        z-index: 2; /* Ensure the icons appear above other elements */
+        left: 12%;
     }
 
     .logo img {
@@ -803,7 +802,15 @@ li{
     }
 
     name{
-        display: none;
+        width: 100%;
+        top: 5px;
+        z-index: 3; /* Ensure the icons appear above other elements */
+    
+        display: flex;
+        justify-content: flex-start;
+        /* margin-top: 20px; */
+        position: fixed;
+        left: 24%;
     }
     
     .biglogo{
