@@ -183,10 +183,13 @@ function handleHeaderColorChange() {
         name: "#af9b8e"
     };
 
-    // Assume you're using the matchMedia approach
-    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const isDarkModeEnabled = darkModeMediaQuery.matches;
+    // Get the body element
+    const body = document.body;
 
+    // Check if the body element has the "dark-mode" class
+    const isDarkModeEnabled = body.classList.contains("dark-mode");
+
+    // Calculate target colors based on scroll position and dark mode state
     const targetHeaderColor = scrollTop > scrollThreshold
         ? (isDarkModeEnabled ? darkModeColors.bright : lightModeColors.dark)
         : (isDarkModeEnabled ? darkModeColors.dark : lightModeColors.bright);
@@ -203,6 +206,7 @@ function handleHeaderColorChange() {
         ? (isDarkModeEnabled ? darkModeColors.name : lightModeColors.bright)
         : (isDarkModeEnabled ? darkModeColors.name : lightModeColors.dark);
 
+    // Apply transitions and colors to elements
     header.style.transition = "background-color 0.3s ease";
     menuBtn.style.transition = "background-color 0.3s ease, color 0.3s ease";
     document.querySelectorAll("name a").forEach(link => {
@@ -228,7 +232,6 @@ window.addEventListener("scroll", handleHeaderColorChange);
 // |                        |
 // ==========================
 
-
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 }
@@ -241,3 +244,15 @@ backToTopButton.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
+
+// ==========================
+// |                        |
+// |       Dark Mode        |
+// |                        |
+// ==========================
+function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+    // Call header color change function after toggling dark mode
+    handleHeaderColorChange();
+} 

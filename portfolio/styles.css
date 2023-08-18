@@ -12,34 +12,30 @@
     font-style: normal;
 }
 
-@media (prefers-color-scheme: light){
-    :root{
-        --background: #f9ecdb;
-        --white: #fff;
-        --grey: #a8a29c;
-        --section: #af9b8e;
-        --overlay: rgba(0, 0, 0, 0.9);
-        --imgborder: #846d62;
-        --icon: rgb(228, 228, 228);
-        --resume: #5c4c41;
-        --text: #000;
-        --buttonhov: #fff;
-    }
+:root{
+    --background: #f9ecdb;
+    --white: #fff;
+    --grey: #a8a29c;
+    --section: #af9b8e;
+    --overlay: rgba(0, 0, 0, 0.9);
+    --imgborder: #846d62;
+    --icon: rgb(228, 228, 228);
+    --resume: #5c4c41;
+    --text: #000;
+    --buttonhov: #fff;
 }
 
-@media (prefers-color-scheme: dark){
-    :root{
-        --background: #2f261a;
-        --white: #fff;
-        --grey: #a8a29c;
-        --section: #5c4c41;
-        --overlay: rgba(0, 0, 0, 0.9);
-        --imgborder: #5c4c41;
-        --icon: rgb(228, 228, 228);
-        --resume: #5c4c41;
-        --text: rgb(228, 228, 228);
-        --buttonhov: #000;
-    }
+.dark-mode {
+    --background: #2f261a;
+    --white: #fff;
+    --grey: #a8a29c;
+    --section: #846d62;
+    --overlay: rgba(0, 0, 0, 0.9);
+    --imgborder: #5c4c41;
+    --icon: rgb(228, 228, 228);
+    --resume: #5c4c41;
+    --text: rgb(228, 228, 228);
+    --buttonhov: #000;
 }
 
 body {
@@ -552,6 +548,7 @@ li{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: var(--section);
     box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2),0 20px 20px 0 rgba(0,0,0,0.2);
     float: left;
     animation: slideInFromLeft 1s ease; 
