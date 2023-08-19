@@ -1,6 +1,4 @@
-# Introduction
-I implemented a website for my portfolio. Try this [link](https://jihunkimcode.github.io/website/portfolio/index.html).
-# Other Websites
-- [Tic-Tac-Toe](https://jihunkimcode.github.io/website/TTT.html)
-- [N-Queens Solver](https://jihunkimcode.github.io/website/N-queens/)
-- [Knight's Tour](https://jihunkimcode.github.io/website/Knight-Tour/)
+# [jihunkimcode.github.io](https://jihunkimcode.github.io)
+**My virtual portfolio website.**
+
+Feel free to browse my website and reach out to me if you have any questions or suggestions!
