@@ -175,7 +175,7 @@ img{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2),0 20px 20px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2);
     float: left;
     animation: slideInFromLeft 1s ease; 
 }
@@ -235,7 +235,7 @@ desc{
 
 .icons a:hover{
     color: white;
-    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2),0 20px 20px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2);
     transform: translateY(-2px);
 }
 
@@ -263,7 +263,7 @@ desc{
 
 .btn.btn-linkedin {
     background-color: #0A66C2;
-    padding: 6px 6px 6px 6px;
+    padding: 6px 8px;
 }
 
 .btn.btn-github {
@@ -421,7 +421,7 @@ name a {
 
 .btn-resume:hover {
     background-color: var(--resume);
-    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2),0 20px 20px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2);
     transform: translateY(-2px);
 }
 
@@ -549,7 +549,7 @@ li{
     background-repeat: no-repeat;
     background-position: center;
     background-color: var(--section);
-    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2),0 20px 20px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2);
     float: left;
     animation: slideInFromLeft 1s ease; 
 }
