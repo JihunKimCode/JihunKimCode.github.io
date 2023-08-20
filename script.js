@@ -80,6 +80,7 @@ function handleMenuLinkClick(event) {
 document.querySelectorAll("nav a").forEach((link) => {
     link.addEventListener("click", () => {
         const nav = document.querySelector("nav");
+        menuBtn.innerHTML = "☰";
         nav.classList.remove("menu-visible");
     });
 });
