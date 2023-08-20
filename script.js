@@ -150,6 +150,16 @@ document.getElementById("menuBtn").addEventListener("click", () => {
     overlay.classList.toggle("overlay-visible");
 });
 
+const menuBtn = document.getElementById("menuBtn");
+
+menuBtn.addEventListener("click", function() {
+    if (menuBtn.innerHTML === "☰") {
+        menuBtn.innerHTML = "✕";
+    } else {
+        menuBtn.innerHTML = "☰";
+    }
+});
+
 // ==========================
 // |                        |
 // |   Head Color Changer   |
