@@ -144,13 +144,6 @@ function fadeOut(element) {
 // Toggle the menu button
 document.getElementById("menuBtn").addEventListener("click", () => {
     const nav = document.querySelector("nav");
-    nav.classList.toggle("show");
-});
-
-
-// Toggle the menu button
-document.getElementById("menuBtn").addEventListener("click", () => {
-    const nav = document.querySelector("nav");
     const overlay = document.querySelector(".overlay");
 
     nav.classList.toggle("menu-visible");
@@ -183,11 +176,8 @@ function handleHeaderColorChange() {
         name: "#af9b8e"
     };
 
-    // Get the body element
-    const body = document.body;
-
     // Check if the body element has the "dark-mode" class
-    const isDarkModeEnabled = body.classList.contains("dark-mode");
+    const isDarkModeEnabled = document.body.classList.contains("dark-mode");
 
     // Calculate target colors based on scroll position and dark mode state
     const targetHeaderColor = scrollTop > scrollThreshold
@@ -251,8 +241,7 @@ backToTopButton.addEventListener("click", () => {
 // |                        |
 // ==========================
 function myFunction() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
+    document.body.classList.toggle("dark-mode");
     // Call header color change function after toggling dark mode
     handleHeaderColorChange();
 } 
