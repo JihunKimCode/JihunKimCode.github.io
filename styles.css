@@ -38,8 +38,7 @@
     --buttonhov: #000;
 }
 
-/*Scroll Bar Settings*/
-/* width */
+/* Scroll Bar Width */
 ::-webkit-scrollbar {
     scroll-behavior: smooth;
     height: calc(100% - 3em);
@@ -48,19 +47,19 @@
     height: 12px;
 }
 
-/* Track */
+/* Scroll Bar Track */
 ::-webkit-scrollbar-track {
     border: none;
     border-radius: 10px;
 }
 
-/* Handle */
+/* Scroll Bar Handle */
 ::-webkit-scrollbar-thumb {
     background: #846d62;  
     border-radius: 20px;
 }
 
-/* Handle on hover */
+/* Scroll Bar Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #af9b8e;  
 }
