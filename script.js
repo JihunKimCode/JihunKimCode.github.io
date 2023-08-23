@@ -208,8 +208,8 @@ function handleHeaderColorChange() {
         : (isDarkModeEnabled ? darkModeColors.name : lightModeColors.dark);
 
     // Apply transitions and colors to elements
-    header.style.transition = "background-color 0.3s ease";
-    menuBtn.style.transition = "background-color 0.3s ease, color 0.3s ease";
+    header.style.transition = "background-color 0.3s ease, box-shadow 0.3s ease"; // Add box-shadow transition
+    menuBtn.style.transition = "background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease"; // Add box-shadow transition
     document.querySelectorAll("name a").forEach(link => {
         link.style.transition = "color 0.3s ease";
     });
@@ -221,6 +221,13 @@ function handleHeaderColorChange() {
     document.querySelectorAll("name a").forEach(link => {
         link.style.color = targetLinkColor;
     });
+
+    // Add shadow to the header when scrolling down
+    if (scrollTop > scrollThreshold) {
+        header.style.boxShadow = "0px 4px 6px rgba(0, 0, 0, 0.1)";
+    } else {
+        header.style.boxShadow = "none"; // Remove the shadow when at the top
+    }
 }
 
 // Call the function initially and add a scroll event listener
