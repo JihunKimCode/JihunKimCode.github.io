@@ -38,6 +38,33 @@
     --buttonhov: #000;
 }
 
+/*Scroll Bar Settings*/
+/* width */
+::-webkit-scrollbar {
+    scroll-behavior: smooth;
+    height: calc(100% - 3em);
+    overflow-y: auto;
+    width: 12px;
+    height: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border: none;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #846d62;  
+    border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #af9b8e;  
+}
+
 body {
     display: block;
     width: 100%;
