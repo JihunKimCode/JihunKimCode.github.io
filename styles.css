@@ -256,19 +256,19 @@ desc{
     margin-left: 10px;
     font-size: 36px;
     text-decoration: none; /* Remove underlines from the icons */
-    color: rgb(228, 228, 228);
+    color: rgb(228, 228, 228) !important;
 }
 
 .icons a:hover{
-    color: white;
-    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2);
-    transform: translateY(-2px);
+    color: white !important;
+    /* box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2); */
+    /* transform: translateY(-2px); */
 }
 
-.icons a:active {
+/* .icons a:active {
     box-shadow: none;
     transform: translateY(0);
-}
+} */
 
 .btn {
     display: flex;
