@@ -694,14 +694,17 @@ button#backToTopBtn:hover {
 
     .img{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         width: 100%;
         order: 1;
         margin-top: 0px;
+        gap: 1%;
+        justify-content: center;
     }
 
     .img img{
         border-width: 3px;
+        width: 45%;
     }
 
     .desc{
