@@ -177,7 +177,7 @@
                         <li><b>Python</b>
                             <ul>
                                 <li>Cybersecurity</li>
-                                <ul><li>Ex. Diffie-Hellman and RSA</li></ul>
+                                <ul><li>Ex. Diffie-Hellman, RSA, and SRA</li></ul>
                                 <li>Machine Learning</li>
                                 <ul><li>Used in almost all research and projects.</li></ul>
                                 <ul><li>Ex. Create a new classical song using Recurrent Neural Network.</li></ul>
@@ -382,7 +382,7 @@
                 <div class="section-interval"></div>
                 <div class="desc">
                     <desc>
-                        <h3>Cryptography: AES, SHA-1, Diffie-Hellman, and RSA</h3>
+                        <h3>Cryptography: AES, SHA-1, Diffie-Hellman, RSA, and SRP</h3>
                         <p class="buttons">
                             <a href="https://www.notion.so/AES-a93f81ecfa7440ac9adc1ac7645514e0" target="_blank" rel="noopener noreferrer">
                                 <button class="button" role="button">
@@ -394,9 +394,14 @@
                                     <i class="fa-solid fa-file"></i> SHA-1
                                 </button>
                             </a>
-                            <a href="https://www.notion.so/Public-Key-Cryptography-a46c7ecedaa44521b0636cee0b27030d" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.notion.so/Diffie-Hellman-a46c7ecedaa44521b0636cee0b27030d" target="_blank" rel="noopener noreferrer">
                                 <button class="button" role="button">
-                                    <i class="fa-solid fa-file-zipper"></i> Diffie-Hellman and RSA
+                                    <i class="fa-solid fa-file"></i> Diffie-Hellman
+                                </button>
+                            </a>
+                            <a href="https://www.notion.so/RSA-36acc3697adf4b7bb32619c0f43d221e" target="_blank" rel="noopener noreferrer">
+                                <button class="button" role="button">
+                                    <i class="fa-solid fa-file"></i> RSA
                                 </button>
                             </a>
                             <a href="https://www.notion.so/SRP-5da37d7c13884f4799cdb87126fad2b9" target="_blank" rel="noopener noreferrer">
@@ -416,12 +421,9 @@
                         SHA-1 is constructed using the Merkle-Damgård Construction, and SHA-1 has its unique padding algorithm. 
                         Implementing SHA-1 was a little complex due to its padding algorithm and internal function, but it was also fun to implement.
                         <br>
-                        To <font color="brown"><strong>implement Diffie-Hellman and RSA</strong></font>, I need to implement <font color="brown"><strong>Fast Modular Exponentiation</strong></font> and a function to check prime using <font color="brown"><strong>Miller-Rabin Algorithms</strong></font>. 
-                        After then, I implemented Diffie-Hellman and RSA with Python using two primes I found. 
-                        In order to implement Diffie-Hellman and RSA, it was important to be mindful of the relationship between numbers and correctly encrypt, decrypt, and decode.
-                        <br>
-                        Using Fast Modular Exponentiation and Miller-Rabin Algorithm again, I <font color="brown"><strong>implemented SRP Protocol</strong></font> with Python. SRP protocol is an augmented Password-authenticated key agreement
-                        (PAKE) protocol. I needed to carefully adjust encode and decode in each steps. It was interesting to learn how SRP works step by step.
+                        I implemented <font color="brown"><strong>Miller-Rabin Algorithms(MRA)</strong></font> which checks whether an input number is a prime. Also, I implemented the <font color="brown"><strong>Fast Modular Exponentiation(FME)</strong></font> function to assist with the calculation used in the MRA.
+                        Then, I implemented <font color="brown"><strong>Diffie-Hellman, RSA, and SRA with Python</strong></font> using two primes I found using FME and MRA. 
+                        It was important to be mindful of correctly encrypting, decrypting, and decoding in each step. It was interesting to learn how each cryptography works step by step.
                     </desc>
                 </div>
                 <div class="section-interval"></div>
