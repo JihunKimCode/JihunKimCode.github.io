@@ -20,7 +20,8 @@
     --overlay: rgba(0, 0, 0, 0.9);
     --imgborder: #846d62;
     --icon: rgb(228, 228, 228);
-    --resume: #5c4c41;
+    --resume: #897367;
+    --resumehov: #9D897C;
     --text: #000;
     --buttonhov: #fff;
 }
@@ -29,11 +30,12 @@
     --background: #2f261a;
     --white: #fff;
     --grey: #a8a29c;
-    --section: #5c4c41;
+    --section: #43372C;
     --overlay: rgba(0, 0, 0, 0.9);
-    --imgborder: #5c4c41;
+    --imgborder: #4C3E33;
     --icon: rgb(228, 228, 228);
     --resume: #4C3E33;
+    --resumehov: #43372C;
     --text: rgb(228, 228, 228);
     --buttonhov: #000;
 }
@@ -434,7 +436,7 @@ name a {
 .btn-resume {
     display: inline-block;
     padding: 10px 20px;
-    background-color: var(--imgborder);
+    background-color: var(--resume);
     color: var(--white);
     text-decoration: none;
     border: none;
@@ -446,7 +448,7 @@ name a {
 }
 
 .btn-resume:hover {
-    background-color: var(--resume);
+    background-color: var(--resumehov);
     box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2);
     transform: translateY(-2px);
 }
