@@ -1,9 +1,7 @@
 let isAnimating = false;
-// ==========================
-// |                        |
-// |        Section         |
-// |                        |
-// ==========================
+/*************
+ *  Section  *
+ *************/
 // Function to hide all sections except the one with the given ID
 function hideSectionsExcept(sectionId) {
     if (isAnimating) return; // Exit if an animation is already in progress
@@ -76,7 +74,7 @@ function handleMenuLinkClick(event) {
     this.classList.add("active");
 }
 
-// Close the menu when a menu item is clicked (for better user experience)
+// Close the menu when a menu item is clicked
 document.querySelectorAll("nav a").forEach((link) => {
     link.addEventListener("click", () => {
         const nav = document.querySelector("nav");
@@ -91,12 +89,9 @@ showCurrentSectionFromHash();
 // Update the content when the URL hash changes (e.g., when switching to another tab)
 window.addEventListener("hashchange", showCurrentSectionFromHash);
 
-// ==========================
-// |                        |
-// |      Fade In/Out       |
-// |                        |
-// ==========================
-// Helper function for fade-in animation
+/*****************
+ *  Fade In/Out  *
+ *****************/
 function fadeIn(element) {
     element.style.opacity = 0;
     element.style.display = "block";
@@ -116,7 +111,6 @@ function fadeIn(element) {
     requestAnimationFrame(animate);
 }
 
-// Helper function for fade-out animation
 function fadeOut(element) {
     element.style.opacity = 1;
     let opacity = 1;
@@ -137,11 +131,9 @@ function fadeOut(element) {
     requestAnimationFrame(animate);
 }
 
-// ==========================
-// |                        |
-// |      Menu Button       |
-// |                        |
-// ==========================
+/*****************
+ *  Menu Button  *
+ *****************/
 // Toggle the menu button
 document.getElementById("menuBtn").addEventListener("click", () => {
     const nav = document.querySelector("nav");
@@ -161,11 +153,9 @@ menuBtn.addEventListener("click", function() {
     }
 });
 
-// ==========================
-// |                        |
-// |   Head Color Changer   |
-// |                        |
-// ==========================
+/************************
+ *  Head Color Changer  *
+ ************************/
 function handleHeaderColorChange() {
     const header = document.querySelector("header");
     const menuBtn = document.querySelector("#menuBtn");
@@ -234,12 +224,9 @@ function handleHeaderColorChange() {
 handleHeaderColorChange();
 window.addEventListener("scroll", handleHeaderColorChange);
 
-// ==========================
-// |                        |
-// |   Scroll up methods    |
-// |                        |
-// ==========================
-
+/***************
+ *  Scroll up  *
+ ***************/
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 }
@@ -253,12 +240,10 @@ backToTopButton.addEventListener("click", () => {
     });
 });
 
-// ==========================
-// |                        |
-// |       Dark Mode        |
-// |                        |
-// ==========================
-function myFunction() {
+/***************
+ *  Dark Mode  *
+ ***************/
+function darkmode() {
     document.body.classList.toggle("dark-mode");
     // Call header color change function after toggling dark mode
     handleHeaderColorChange();
