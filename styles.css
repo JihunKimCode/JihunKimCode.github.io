@@ -753,6 +753,7 @@ button#backToTopBtn:hover {
         background-color: var(--background);
         cursor: pointer;
         float: left;
+        left: 3%;
     }
     
     /* Position the menu container */
