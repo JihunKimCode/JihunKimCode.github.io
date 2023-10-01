@@ -754,6 +754,7 @@ button#backToTopBtn:hover {
         cursor: pointer;
         float: left;
         left: 3%;
+        width: 30px;
     }
     
     /* Position the menu container */
