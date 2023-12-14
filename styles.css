@@ -535,7 +535,7 @@ name a {
     width: 100%;
     text-align: left;
     outline: none;
-    font-size: 20px;
+    font-size: 22px;
     border-radius: 25px;
     border: solid var(--text);
     border-width: 2px;
@@ -550,6 +550,10 @@ name a {
 }
 
 .education .active:after {
+    content: "\02795"; /* Unicode character for "plus" sign (+) */
+}
+
+.skills .active:after {
     content: "\02795"; /* Unicode character for "plus" sign (+) */
 }
   
