@@ -711,7 +711,7 @@ li{
 footer {
     background-color: var(--imgborder);
     color: var(--white);
-    text-align: center;
+    text-align: left;
     padding: 10px 0;
 }
 
