@@ -426,7 +426,7 @@ name a {
     align-items: center;
     margin-bottom: 20px;
 
-    margin-top: 25px;
+    margin-top: 30px;
     font-size: 32px;
     font-family: 'NanumB', sans-serif;
     margin-right: 10px;
@@ -989,7 +989,7 @@ button#backToTopBtn:hover {
 
     .education,
     .skills {
-        display: grid;
+        display: table-row;
         width: fit-content;
         justify-content: center;
         align-items: center; /* Center vertically */
