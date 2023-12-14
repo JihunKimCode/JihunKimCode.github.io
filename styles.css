@@ -526,6 +526,59 @@ name a {
     line-height: 1.2;
 }
 
+.collapsible {
+    font-family: 'NanumB', sans-serif;
+    background-color: var(--section);
+    color: var(--text);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    border-radius: 25px;
+    border: solid var(--text);
+    border-width: 2px;
+}
+
+.collapsible:after {
+    content: '\2796'; /* Unicode character for "minus" sign (-) */ 
+    font-size: 13px;
+    color: var(--resume);
+    float: right;
+    margin-left: 5px;
+}
+
+.education .active:after {
+    content: "\02795"; /* Unicode character for "plus" sign (+) */
+}
+  
+.collapsible:hover {
+    background-color: var(--grey);
+}
+
+.content {
+    padding: 0 18px;
+    display: block;
+    overflow: hidden;
+    background-color: var(--section);
+    border-radius: 25px;
+    font-size: 20px;
+    line-height: 1.5;
+    border: solid var(--text);
+    border-width: 2px;
+}
+
+.content p{
+    color: black;
+}
+
+.content h1{
+    font-family: 'NanumB', sans-serif;
+    line-height: 1;
+    font-size: 20px;
+}
+
 .section-interval {
     width: 2%; /* Adjust the width of the interval as needed */
 }
@@ -1035,4 +1088,13 @@ button#backToTopBtn:hover {
     .footicons .btn {
         margin-right: 15px;
     }
+
+    .collapsible {
+        background-color: var(--background);
+    }
+    
+    .content {
+        background-color: var(--background);
+    }
+    
 }
