@@ -542,7 +542,7 @@ name a {
 }
 
 .collapsible:after {
-    content: '\2796'; /* Unicode character for "minus" sign (-) */ 
+    content: "➖";  /*2796*/
     font-size: 13px;
     color: var(--resume);
     float: right;
@@ -550,11 +550,11 @@ name a {
 }
 
 .education .active:after {
-    content: "\02795"; /* Unicode character for "plus" sign (+) */
+    content: "➕";  /*2795*/
 }
 
 .skills .active:after {
-    content: "\02795"; /* Unicode character for "plus" sign (+) */
+    content: "➕";  /*2795*/
 }
   
 .collapsible:hover {
