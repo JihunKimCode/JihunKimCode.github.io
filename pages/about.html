@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Website Thumbnail Information -->
+    <title>Jihun Kim</title>
+    <meta property="og:url" content="https://jihunkimcode.github.io">
+    <meta property="og:title" content="Jihun Kim">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jihunkimcode.github.io/images/JK.png">
+    <meta property="og:description" content="Virtual portfolio website created by Jihun Kim">
+    <!-- Website Information -->
+    <meta name="author" content="Jihun Kim">
+    <meta name="keywords" content="Jihun, Jihun Kim">
+    <meta name="description" content="Jihun Kim's virtual portfolio website. This website contains information about Jihun's education, skills, projects, and experiences.">
+    <!-- Website Settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../images/JK.png">
+    <link rel="stylesheet" href="../styles.css">
+    <!-- Add Font Awesome CSS link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <button id="menuBtn">☰</button>
+        <div class="logo">
+            <a href="home.html">
+                <img src="../images/JK.png" alt="my Logo">
+            </a>
+        </div>
+        <name>
+            <a href="home.html">Jihun Kim</a>
+        </name>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="experiences.html">Experiences</a>
+            <a href="awards.html">Awards</a>
+        </nav>
+        <div class="icons">
+            <a class="btn btn-dark" onclick="darkmode()">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </a>
+            <a href="mailto:jiunkim8@gmail.com" class="btn btn-email" >
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jihunkimcode/" class="btn btn-linkedin" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/JihunKimCode" class="btn btn-github" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </header>
+    <main>
+        <!-- ABOUT TAB -->
+        <div id="about" class="content-section">
+            <div class="resume">
+                <a href="../files/Kim_Jihun Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-resume">
+                    View My Resume (PDF)
+                </a>
+            </div>
+            <div class="about-content">
+                <div class="sect">
+                    <span class="sect-text">Education</span>
+                    <hr class="sect-line">
+                </div>
+                  
+                <div class="education">
+                    <div class=topic><b>Education</b></div>
+                    <h3>University of Tennessee, Knoxville</h3>
+                    <div class="image-container">
+                        <img src="../images/Ayres_Hall_abree.jpg" alt="Ayres Hall">
+                    </div>
+                    <br><br>
+                    <!-- Attendance & Grades -->
+                    <button type="button" class="collapsible"><b>Attendance & Grades</b></button>
+                    <div class="content">
+                        <h1><b>Attendance</b>:</h1>
+                            <ul><li>Aug 2020 - May 2024</l1></ul>
+                        <h1><b>Cumulative GPA</b>:</h1>
+                            <ul><li>3.98/4.00</li></ul>
+                        <h1><b>Dean's List</b>:</h1>
+                            <ul><li>Fall 2020 - Spring 2023</li></ul>
+                    </div>
+                    <br><br>
+                    <!-- Courses -->
+                    <button type="button" class="collapsible"><b>Courses</b></button>
+                    <div class="content">
+                        <h1><b>Major: Computer Science</b></h1>
+                        <ul>
+                            <li>Data Structures & Algorithms</li>
+                            <li>Systems Programming</li>
+                            <li>Software Engineering</li>
+                            <li>Computer Organization</li>                           
+                            <li>Operating Systmes</li>                           
+                        </ul>
+                        <h1><b>Minors</b>:</h1>
+                        <ul>
+                            <li><b>Cybersecurity</b></li>
+                                <ul>
+                                    <li>Applied Cryptography</li>
+                                    <li>Human Factors in Cybersecurity</li>
+                                </ul>
+                            <li><b>Machine Learning</b></li>
+                            <ul>
+                                <li>Biologically-Inspired Computation</li>
+                                <li>Fundamentals of Digital Archeology</li>
+                                <li>Artificial Intelligence</li>
+                            </ul>
+                        </ul>
+                        <h1><b>Others</b>:</h1>
+                            <ul>
+                                <li>Physics for Engineers</li>
+                                <li>Electricity and Magnetism</li>
+                                <li>Statistics</li>
+                                <li>Probability and Random Variables</li>
+                            </ul>
+                    </div> 
+                    <br><br>    
+                    <!-- Club Activities -->
+                    <button type="button" class="collapsible"><b>Club Activities</b></button>
+                    <div class="content">
+                        <h1><b>HackUTK</b></h1>
+                            <ul>
+                                <li>Learned about cybersecurity and the basic concepts of hacking.</li>
+                                <li>Helped to operate VOLHACKS V as supporting participants.</li>
+                            </ul>
+                        <h1><b>utkML</b></h1>
+                            <ul><li>Learned about machine learning and how it is used in real-life.</li></ul>
+                        <h1><b>Hack4Impact</b></h1>
+                            <ul><li>Developed a website helping capture volunteer information and event management.</li></ul>                           
+                        <h1><b>Excel Modeling Club</b></h1>
+                            <ul><li>Learned functions and features of Excel and prepared for the competition.</li></ul>                           
+                    </div>                       
+                </div>
+                <br><br>
+                <div class="sect">
+                    <span class="sect-text">Skills</span>
+                    <hr class="sect-line">
+                </div>
+                <br><br>
+                <div class="section-interval"></div>
+                <div class="skills">
+                    <div class=topic><b>Skills</b></div>
+                    <!-- Proficient -->
+                    <button type="button" class="collapsible"><b>💡Proficient</b></button>
+                    <div class="content">
+                        <h1><b>Python</b></h1>
+                            <ul>
+                                <li><b>Cybersecurity</b></li>
+                                <ul><li>Ex. Diffie-Hellman, RSA, and SRA</li></ul>
+                                <li><b>Machine Learning</b></li>
+                                <ul><li>Used in almost all research and projects.</li></ul>
+                                <ul><ul>
+                                    <li>Create a new classical song using Recurrent Neural Network.</li>
+                                    <li>Wordle Solver with Bayesian Model</li>
+                                </ul></ul>
+                            </ul>
+                        <h1><b>C++</b></h1>
+                            <ul>
+                                <li>Data Structures & Algorithms</li>
+                                <li>Used in almost all university assignments.</li>
+                                <li>Used in some of personal projects.</li>
+                            </ul>
+                    </div>
+                    <br><br>
+                    <!-- Learning/Used -->
+                    <button type="button" class="collapsible"><b>💡Learning/Used</b></button>
+                    <div class="content">
+                        <h1><b>C, C#, and GO</b></h1>
+                        <h1><b>Typescript and Sass</b></h1>
+                            <ul>
+                                <li>Used for redesigning University dining website.</li>
+                            </ul>
+                        <h1><b>HTML5, JavaScript, and CSS3</b></h1>
+                        <ul><li>Used for making a portfolio website and other personal websites.</li></ul>
+                    </div>
+                    <br><br>
+                    <!-- Tools and Libraries -->
+                    <button type="button" class="collapsible"><b>💡Tools and Libraries</b></button>
+                    <div class="content">
+                        <h1><b>Excel and Pandas</b></h1>
+                            <ul><li>Used for making graphs and tables.</li></ul>
+                        <h1><b>Vim</b></h1>
+                        <h1><b>Visual Studio Code</b></h1>
+                        <h1><b>GitHub and GitLab</b></h1>
+                        <h1><b>Jupyter Notebook and TensorFlow</b></h1>
+                            <ul><li>Mostly used for Machine Learning projects.</li></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>    
+    <footer>
+        <div class="footicons">
+            <a class="btn btn-dark" onclick="darkmode()">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </a>
+            <a href="mailto:jiunkim8@gmail.com" class="btn btn-email" >
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jihunkimcode/" class="btn btn-linkedin" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/JihunKimCode" class="btn btn-github" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> Jihun Kim. All rights reserved.</p>
+            <button id="backToTopBtn"><i class="fa-solid fa-chevron-up"></i></button>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>

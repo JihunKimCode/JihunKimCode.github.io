@@ -1,93 +1,17 @@
-let isAnimating = false;
-/*************
- *  Section  *
- *************/
-// Function to hide all sections except the one with the given ID
-function hideSectionsExcept(sectionId) {
-    if (isAnimating) return; // Exit if an animation is already in progress
-    isAnimating = true;
+/****************
+ *  Index.html  *
+ ****************/
+document.addEventListener('DOMContentLoaded', function() {
+    var animatedElement = document.querySelector('.category');
 
-    const sections = document.querySelectorAll(".content-section");
-
-    // Wait for all fade-out animations to complete before showing the target section
-    Promise.all(
-        Array.from(sections).map((section) => {
-            if (section.id === sectionId) {
-                return fadeIn(section);
-            } else if (section.style.display !== "none") {
-                return fadeOut(section);
-            }
-        })
-    ).then(() => {
-        sections.forEach((section) => {
-            if (section.id !== sectionId) {
-                section.style.display = "none";
-            }
-        });
-        const targetSection = document.getElementById(sectionId);
-        targetSection.style.display = "block";
-        isAnimating = false;
-    });
-}
-
-// Function to show the selected section with fade-in and fade-out animations
-function showSection(sectionId) {
-    window.scrollTo(0, 0);
-    hideSectionsExcept(sectionId);
-}
-
-function showCurrentSectionFromHash() {
-    const currentHash = window.location.hash;
-    const sectionId = currentHash ? currentHash.substring(1) : "home";
-
-    // Remove the 'active' class from all menu links
-    document.querySelectorAll("nav a").forEach((link) => {
-        link.classList.remove("active");
-    });
-
-    // Add the 'active' class to the menu link corresponding to the current section
-    const activeLink = document.querySelector(`nav a[href="#${sectionId}"]`);
-    if (activeLink) {
-        activeLink.classList.add("active");
+    if(animatedElement){
+        // Add a class to trigger the animation
+        animatedElement.classList.add('animate');
+        setTimeout(function() {
+            document.getElementById('redirectMessage').style.display = 'block';
+        }, 2000);
     }
-
-    showSection(sectionId);
-}
-
-// Function to handle menu link clicks
-function handleMenuLinkClick(event) {
-    event.preventDefault();
-    const sectionId = this.getAttribute("href").substring(1);
-    const targetSection = document.getElementById(sectionId);
-    targetSection.scrollIntoView({ behavior: "smooth" });
-
-    // Update the URL without reloading the page
-    window.history.pushState(null, null, "#" + sectionId);
-
-    // Show the corresponding section with animation
-    showSection(sectionId);
-
-    // Add the 'active' class to the clicked menu link
-    document.querySelectorAll("nav a").forEach((link) => {
-        link.classList.remove("active");
-    });
-    this.classList.add("active");
-}
-
-// Close the menu when a menu item is clicked
-document.querySelectorAll("nav a").forEach((link) => {
-    link.addEventListener("click", () => {
-        const nav = document.querySelector("nav");
-        menuBtn.innerHTML = "☰";
-        nav.classList.remove("menu-visible");
-    });
 });
-
-// Show the current section from the URL hash on initial load
-showCurrentSectionFromHash();
-
-// Update the content when the URL hash changes (e.g., when switching to another tab)
-window.addEventListener("hashchange", showCurrentSectionFromHash);
 
 /*****************
  *  Fade In/Out  *
@@ -227,10 +151,6 @@ window.addEventListener("scroll", handleHeaderColorChange);
 /***************
  *  Scroll up  *
  ***************/
-window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-}
-
 const backToTopButton = document.getElementById("backToTopBtn");
 
 backToTopButton.addEventListener("click", () => {
@@ -244,10 +164,28 @@ backToTopButton.addEventListener("click", () => {
  *  Dark Mode  *
  ***************/
 function darkmode() {
+    // Toggle the dark mode class on the body
     document.body.classList.toggle("dark-mode");
+
+    // Check if dark mode is enabled and store the state in localStorage
+    var isDarkModeEnabled = document.body.classList.contains("dark-mode");
+    localStorage.setItem("darkMode", isDarkModeEnabled);
+
     // Call header color change function after toggling dark mode
     handleHeaderColorChange();
 } 
+
+// Function to set the initial dark mode state based on localStorage
+function setInitialDarkMode() {
+    var isDarkModeEnabled = localStorage.getItem("darkMode") === "true";
+    if (isDarkModeEnabled) {
+        document.body.classList.add("dark-mode");
+        handleHeaderColorChange();
+    }
+}
+
+// Call setInitialDarkMode on page load to set the initial dark mode state
+setInitialDarkMode(); 
 
 /*************************
  *  Collapsible Content  *
@@ -264,4 +202,33 @@ for (var i = 0; i < coll.length; i++) {
       content.style.display = "none";
     }
   });
+}
+
+/**************************
+ *  Arrange img and desc  *
+ **************************/
+document.addEventListener("DOMContentLoaded", function () {
+    var imgDescElements = document.querySelectorAll('.imgdesc');
+
+    for (var i = 0; i < imgDescElements.length; i++) {
+        // Switch img and desc for every odd-numbered
+        if (i % 2 === 1) {
+            var imgElement = imgDescElements[i].querySelector('.img');
+            var descElement = imgDescElements[i].querySelector('.desc');
+
+            imgDescElements[i].insertBefore(descElement, imgElement);
+        }
+    }
+});
+
+/********************
+ *  Copyright Year  *
+ ********************/
+// Copyright year setting
+var currentYear = new Date().getFullYear();
+document.getElementById("year").innerHTML = currentYear;
+
+// Capitalize the first letter of a string
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }

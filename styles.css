@@ -96,7 +96,7 @@ section{
 
 nav {
     color: #a8a29c;
-    width: 60%;
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -179,21 +179,27 @@ section:not(:first-of-type) {
     display: none;
 }
 
-.imgdesc{
+.imgdesc {
     display: table;
     margin-top: 30px;
     margin-bottom: 20px;
+    width: 100%;
 }
 
-.img{
+.img {
     display: table-cell;
     width: 30%;
+    padding-left: 20px; 
+    padding-right: 20px; 
 }
 
-.desc{
+.desc {
     display: table-cell;
-    width: 60%;
+    width: 70%; 
+    padding-left: 20px; 
+    padding-right: 20px; 
 }
+
 img{
     display: table-cell;
     width: 100%;
@@ -244,6 +250,18 @@ desc{
         transform: translateX(0);
     }
 }   
+
+/* Define the animation for the description elements coming from the top */
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+        display: none;
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
 .icons, .fticons {
     display: flex;
     justify-content: flex-end; /* Align the icons to the right side */
@@ -430,7 +448,7 @@ name a {
     font-size: 32px;
     font-family: 'NanumB', sans-serif;
     margin-right: 10px;
-    animation: slideInFromLeft 1s ease; 
+    animation: slideInFromTop 1s ease; 
 }
 
 .btn-resume {
@@ -443,8 +461,6 @@ name a {
     border-radius: 4px;
     font-family: 'NanumS', sans-serif;
     text-align: center;
-    animation: slideInFromRight 1s ease; 
-    transition: all 0.3s;
 }
 
 .btn-resume:hover {
@@ -583,10 +599,6 @@ name a {
     font-size: 20px;
 }
 
-.section-interval {
-    width: 2%; /* Adjust the width of the interval as needed */
-}
-
 h3{
     font-family: 'NanumB', sans-serif;
     font-size: 24px;
@@ -607,9 +619,7 @@ li{
 .desc p{
     font-style: italic;
     text-align: right;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 0;
+    margin: 5px 0px;
 }
 
 .desc a{
@@ -624,7 +634,7 @@ li{
 }
 
 .img img{
-    margin-top: 40px;
+    margin: 40px 10px 10px 10px;
     display: table-cell;
     width: 100%;
     border: solid var(--imgborder);
@@ -739,8 +749,56 @@ button#backToTopBtn:hover {
     display: none;
 }
 
+.allCategories{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+.category {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 25%;
+    margin: 10px 2.5%; 
+    background-color: var(--background);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.category img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    background-color: white;
+    border-width: 5px;
+    animation: rotate 2s linear;
+}
+
+.category .content {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: var(--background);
+    box-sizing: border-box;
+    line-height: 1.5;
+    border: none;
+    text-align: center;
+}
+
+#redirectMessage{
+    display: none;
+}
+
 /* Styles for tablets (screen sizes between 768px and 1023px) */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1200px) {
     .projsect{
         margin-top: 140px;
     }
@@ -789,6 +847,11 @@ button#backToTopBtn:hover {
     
     .resume {
         margin-top: 70px;
+    }
+
+    .category {
+        width: 50%;
+        height: auto;
     }
 }
 
@@ -1007,11 +1070,9 @@ button#backToTopBtn:hover {
 
     .resume {
         left: 0%;
-        width: 90%;
         font-size: 18px;
         position: relative;
         margin-right: 0px;
-        align-items: start;
     }
 
     .education .image-container {
@@ -1020,9 +1081,6 @@ button#backToTopBtn:hover {
         margin-bottom: 0px;
     }
 
-    .section-interval {
-        display: none; /* Hide the interval on mobile */
-    }
     .topic{
         display: none;
         font-size: 28px;
@@ -1101,4 +1159,8 @@ button#backToTopBtn:hover {
         background-color: var(--background);
     }
     
+    .category {
+        width: 80%;
+        height: auto;
+    }
 }
