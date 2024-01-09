@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add a class to trigger the animation
         animatedElement.classList.add('animate');
         setTimeout(function() {
-            document.getElementById('redirectMessage').style.display = 'block';
+            document.getElementById('redirect').style.display = 'block';
         }, 1500);
     }
 });
