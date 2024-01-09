@@ -146,11 +146,6 @@ main {
     padding: 20px;
 }
 
-/* Hide all sections except the home section by default */
-section:not(:first-of-type) {
-    display: none;
-}
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -172,11 +167,6 @@ section:not(:first-of-type) {
 /* Apply fade-in and fade-out animations to content sections */
 .content-section {
     animation-duration: 0.5s;
-}
-
-/* Hide all sections except the home section by default */
-section:not(:first-of-type) {
-    display: none;
 }
 
 .imgdesc {
@@ -597,6 +587,17 @@ name a {
     font-family: 'NanumB', sans-serif;
     line-height: 1;
     font-size: 20px;
+}
+
+.content a{
+    color: var(--text);
+    text-decoration: underline;
+}
+
+.content a:hover{
+    text-decoration: none;
+    color: #846d62;
+    font-weight: bold;
 }
 
 h3{
