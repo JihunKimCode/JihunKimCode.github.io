@@ -770,7 +770,7 @@ button#backToTopBtn:hover {
         transform: rotate(0deg);
     }
     100% {
-        transform: rotate(360deg);
+        transform: rotate(-360deg);
     }
 }
 
@@ -792,6 +792,10 @@ button#backToTopBtn:hover {
     line-height: 1.5;
     border: none;
     text-align: center;
+}
+
+.category .content a{
+    text-decoration: none;
 }
 
 #redirectMessage{
