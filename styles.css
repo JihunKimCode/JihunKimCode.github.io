@@ -767,7 +767,7 @@ button#backToTopBtn:hover {
 
 @keyframes rotate {
     0% {
-        transform: rotate(0deg);
+        transform: rotate(-180deg);
     }
     100% {
         transform: rotate(-360deg);
@@ -780,7 +780,7 @@ button#backToTopBtn:hover {
     object-fit: cover;
     background-color: white;
     border-width: 5px;
-    animation: rotate 2s linear;
+    animation: rotate 1s linear;
 }
 
 .category .content {
