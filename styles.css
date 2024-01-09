@@ -817,6 +817,8 @@ button#backToTopBtn:hover {
         margin-top: 0px;
         gap: 1%;
         justify-content: center;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     .img img{
@@ -828,6 +830,8 @@ button#backToTopBtn:hover {
         display: flex;
         width: 100%;
         order: 2;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     img{
@@ -937,6 +941,8 @@ button#backToTopBtn:hover {
         flex-direction: column;
         width: 100%;
         order: 1;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     .img img{
@@ -947,6 +953,8 @@ button#backToTopBtn:hover {
         display: flex;
         width: 100%;
         order: 2;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     img{
@@ -1072,7 +1080,7 @@ button#backToTopBtn:hover {
         left: 0%;
         font-size: 18px;
         position: relative;
-        margin-right: 0px;
+        margin-top: 0px;
     }
 
     .education .image-container {
