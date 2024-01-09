@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         animatedElement.classList.add('animate');
         setTimeout(function() {
             document.getElementById('redirectMessage').style.display = 'block';
-        }, 2100);
+        }, 2500);
     }
 });
 

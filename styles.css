@@ -824,6 +824,8 @@ button#backToTopBtn:hover {
     .img img{
         border-width: 3px;
         width: 45%;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .desc{
@@ -947,6 +949,8 @@ button#backToTopBtn:hover {
 
     .img img{
         border-width: 3px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .desc{
@@ -1080,7 +1084,7 @@ button#backToTopBtn:hover {
         left: 0%;
         font-size: 18px;
         position: relative;
-        margin-top: 0px;
+        margin-top: 20px;
     }
 
     .education .image-container {
