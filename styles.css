@@ -17,6 +17,7 @@
     --white: #fff;
     --grey: #a8a29c;
     --section: #BCAA9C;
+    --collapsible: #D2C2B3;
     --overlay: rgba(0, 0, 0, 0.9);
     --imgborder: #846d62;
     --icon: rgb(228, 228, 228);
@@ -27,16 +28,17 @@
 }
 
 .dark-mode {
-    --background: #2f261a;
+    --background: #221D16;
     --white: #fff;
     --grey: #a8a29c;
     --section: #43372C;
+    --collapsible: #372E24;
     --overlay: rgba(0, 0, 0, 0.9);
     --imgborder: #4C3E33;
     --icon: rgb(228, 228, 228);
     --resume: #4C3E33;
     --resumehov: #43372C;
-    --text: rgb(228, 228, 228);
+    --text: rgb(228, 228, 228, 0.87);
     --buttonhov: #000;
 }
 
@@ -531,9 +533,27 @@ name a {
     line-height: 1.2;
 }
 
+.collapsibleContent{
+    background-color: var(--collapsible);
+    border-radius: 25px;
+    border: solid #000;
+    border-width: 2px;
+}
+
+/*Remove default button design*/
+button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	outline: inherit;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px; /* Adjust border radius for top */    
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px; /* Adjust border radius for bottom */    
+}
+
 .collapsible {
     font-family: 'NanumB', sans-serif;
-    background-color: var(--section);
     color: var(--text);
     cursor: pointer;
     padding: 18px;
@@ -541,9 +561,6 @@ name a {
     text-align: left;
     outline: none;
     font-size: 22px;
-    border-radius: 25px;
-    border: solid var(--text);
-    border-width: 2px;
 }
 
 .collapsible:after {
@@ -562,20 +579,15 @@ name a {
     content: "➕";  /*2795*/
 }
   
-.collapsible:hover {
-    background-color: var(--grey);
-}
 
 .content {
     padding: 0 18px;
     display: block;
     overflow: hidden;
-    background-color: var(--section);
-    border-radius: 25px;
     font-size: 20px;
     line-height: 1.5;
-    border: solid var(--text);
-    border-width: 2px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px; /* Adjust border radius for bottom */
 }
 
 .content p{
@@ -1176,14 +1188,6 @@ button#backToTopBtn:hover {
 
     .footicons .btn {
         margin-right: 15px;
-    }
-
-    .collapsible {
-        background-color: var(--background);
-    }
-    
-    .content {
-        background-color: var(--background);
     }
     
     .category {

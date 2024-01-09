@@ -61,10 +61,7 @@ function fadeOut(element) {
 // Toggle the menu button
 document.getElementById("menuBtn").addEventListener("click", () => {
     const nav = document.querySelector("nav");
-    const overlay = document.querySelector(".overlay");
-
     nav.classList.toggle("menu-visible");
-    overlay.classList.toggle("overlay-visible");
 });
 
 const menuBtn = document.getElementById("menuBtn");
@@ -96,8 +93,8 @@ function handleHeaderColorChange() {
     };
 
     const darkModeColors = {
-        bright: "#5c4c41",
-        dark: "#2f261a",
+        bright: "#2f261a",
+        dark: "#221d16",
         name: "#af9b8e"
     };
 
