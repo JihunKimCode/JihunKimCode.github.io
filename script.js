@@ -233,11 +233,10 @@ document.addEventListener("DOMContentLoaded", function () {
 var currentYear = new Date().getFullYear();
 document.getElementById("year").innerHTML = currentYear;
 
-// Capitalize the first letter of a string
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}
 
+/***************************
+ *  Interaction Animation  *
+ ***************************/
 // Function to handle the intersection observer callback
 function handleIntersection(entries, observer) {
     entries.forEach(entry => {
@@ -250,11 +249,14 @@ function handleIntersection(entries, observer) {
     });
 }
 
+// Determine the threshold based on the device width
+const isSmallScreen = window.innerWidth < 1024;
+
 // Create an intersection observer
 const observer = new IntersectionObserver(handleIntersection, {
     root: null, // Use the viewport as the root
     rootMargin: '0px', // No margin
-    threshold: 0.7 // Trigger when 50% of the section is visible
+    threshold: isSmallScreen ? 0.3 : 0.6 // Adjusted threshold based on screen size
 });
 
 // Target all sections with the 'animated-section' class
