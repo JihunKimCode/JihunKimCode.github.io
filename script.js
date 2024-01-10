@@ -148,6 +148,10 @@ window.addEventListener("scroll", handleHeaderColorChange);
 /***************
  *  Scroll up  *
  ***************/
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
+
 const backToTopButton = document.getElementById("backToTopBtn");
 
 backToTopButton.addEventListener("click", () => {
@@ -213,6 +217,10 @@ document.addEventListener("DOMContentLoaded", function () {
             var imgElement = imgDescElements[i].querySelector('.img');
             var descElement = imgDescElements[i].querySelector('.desc');
 
+            // Switch CSS for animated-section
+            imgElement.classList.add('temp-img');
+            descElement.classList.add('temp-desc');
+
             imgDescElements[i].insertBefore(descElement, imgElement);
         }
     }
@@ -229,3 +237,30 @@ document.getElementById("year").innerHTML = currentYear;
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
+
+// Function to handle the intersection observer callback
+function handleIntersection(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // If the section is in view, add the "visible" class to both img and desc
+            entry.target.querySelector('.img').classList.add('visible');
+            entry.target.querySelector('.desc').classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}
+
+// Create an intersection observer
+const observer = new IntersectionObserver(handleIntersection, {
+    root: null, // Use the viewport as the root
+    rootMargin: '0px', // No margin
+    threshold: 0.7 // Trigger when 50% of the section is visible
+});
+
+// Target all sections with the 'animated-section' class
+const animatedSections = document.querySelectorAll('.animated-section');
+
+// Start observing each section
+animatedSections.forEach(section => {
+    observer.observe(section);
+});

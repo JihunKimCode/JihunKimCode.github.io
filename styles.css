@@ -203,7 +203,7 @@ img{
     background-position: center;
     box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2);
     float: left;
-    animation: slideInFromLeft 1s ease; 
+    /* animation: slideInFromLeft 1s ease;  */
 }
 
 h2 {
@@ -219,8 +219,44 @@ desc{
     font-family: 'NanumB', sans-serif;
     font-size: 24px;
     line-height: 1.5;
-    animation: slideInFromRight 1s ease;
+    /* animation: slideInFromRight 1s ease; */
     color: var(--text);
+}
+
+.animated-section .img {
+    opacity: 0;
+    transform: translateX(-10%);
+    transition: opacity 1s, transform 1s;
+}
+
+.animated-section .desc {
+    opacity: 0;
+    transform: translateX(10%);
+    transition: opacity 1s, transform 1s;
+}
+
+.animated-section .img.temp-img {
+    /* Styles for .desc */
+    opacity: 0;
+    transform: translateX(10%);
+    transition: opacity 1s, transform 1s;
+}
+
+.animated-section .desc.temp-desc {
+    /* Styles for .img */
+    opacity: 0;
+    transform: translateX(-10%);
+    transition: opacity 1s, transform 1s;
+}
+
+.animated-section .img.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animated-section .desc.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* Define the animation for the image coming from the left */
