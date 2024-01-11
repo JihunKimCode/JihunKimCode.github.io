@@ -64,6 +64,21 @@ document.getElementById("menuBtn").addEventListener("click", () => {
     nav.classList.toggle("menu-visible");
 });
 
+// Close the menu when clicking outside of it
+document.body.addEventListener("click", (event) => {
+    const nav = document.querySelector("nav");
+    const menuBtn = document.getElementById("menuBtn");
+
+    if (nav.classList.contains("menu-visible") && !menuBtn.contains(event.target) && !nav.contains(event.target)) {
+        nav.classList.remove("menu-visible");
+        if (menuBtn.innerHTML === "☰") {
+            menuBtn.innerHTML = "✕";
+        } else {
+            menuBtn.innerHTML = "☰";
+        }
+    }
+});
+
 const menuBtn = document.getElementById("menuBtn");
 
 menuBtn.addEventListener("click", function() {
@@ -265,4 +280,54 @@ const animatedSections = document.querySelectorAll('.animated-section');
 // Start observing each section
 animatedSections.forEach(section => {
     observer.observe(section);
+});
+
+/*****************
+ *  Image Popup  *
+ *****************/
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll(".imgdesc");
+    const imgPopup = document.createElement("div");
+    imgPopup.classList.add("img-popup");
+    document.body.appendChild(imgPopup);
+
+    sections.forEach((section) => {
+        const images = section.querySelectorAll(".img img");
+        images.forEach((image) => {
+            image.addEventListener("click", () => {
+                showImage(image.src);
+            });
+        });
+    });
+
+    imgPopup.addEventListener("click", (event) => {
+        if (event.target === imgPopup) {
+            hideImage();
+        }
+    });
+
+    function showImage(src) {
+        const imgElement = document.createElement("img");
+        imgElement.src = src;
+
+        const closeBtn = document.createElement("span");
+        closeBtn.classList.add("close-btn");
+        closeBtn.innerHTML = "&times;"; // X mark
+        closeBtn.addEventListener("click", hideImage);
+
+        imgPopup.innerHTML = "";
+        imgPopup.appendChild(imgElement);
+        imgPopup.appendChild(closeBtn);
+        imgPopup.style.display = "flex";
+
+        // Add a class to the header for darkened background
+        document.querySelector("header").classList.add("header-dark-background");
+    }
+
+    function hideImage() {
+        imgPopup.style.display = "none";
+
+        // Remove the darkened background class from the header
+        document.querySelector("header").classList.remove("header-dark-background");
+    }
 });
