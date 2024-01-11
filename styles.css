@@ -666,7 +666,6 @@ button {
     content: "➕";  /*2795*/
 }
   
-
 .content {
     padding: 0 18px;
     display: block;
@@ -861,14 +860,14 @@ button#backToTopBtn:hover {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
-    margin-top: 100px;
     align-items: center;
+    overflow: hidden;
 }
 
 .category {
     display: inline-flex;
     box-sizing: border-box;
-    width: 25%;
+    width: 30%;
     background-color: var(--background);
     flex-direction: column;
     align-items: center;
@@ -877,9 +876,14 @@ button#backToTopBtn:hover {
 
 @keyframes rotate {
     0% {
+        width: 0%;
         transform: rotate(-180deg);
     }
+    60% {
+        width: 120%;
+    }
     100% {
+        width: 100%;
         transform: rotate(-360deg);
     }
 }
@@ -890,7 +894,8 @@ button#backToTopBtn:hover {
     object-fit: cover;
     background-color: white;
     border-width: 5px;
-    animation: rotate 1s linear;
+    margin-top: 60px;
+    animation: rotate 1.5s linear;
 }
 
 .category .content {
@@ -902,10 +907,13 @@ button#backToTopBtn:hover {
     line-height: 1.5;
     border: none;
     text-align: center;
+    padding: none;
 }
 
 .category .content .resume{
     margin-top: 20px;
+    width: 100%;
+    height: auto;
 }
 
 .category .content a{
