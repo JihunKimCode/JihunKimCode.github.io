@@ -805,7 +805,7 @@ li{
     text-align: center;
     position: relative;
     display: block;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .projsect-text {
@@ -930,7 +930,7 @@ button#backToTopBtn:hover {
 /* Styles for tablets (screen sizes between 768px and 1023px) */
 @media (min-width: 768px) and (max-width: 1200px) {
     .projsect{
-        margin-top: 140px;
+        margin-top: 120px;
     }
 
     .imgdesc{
