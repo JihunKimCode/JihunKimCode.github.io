@@ -204,7 +204,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-span{
+#highlight{
     color : brown;
     font-weight: bold;
 }
@@ -294,9 +294,13 @@ desc{
     position: absolute;
     top: 1%;
     right: 1%;
-    color: white;
+    color: rgb(228, 228, 228);
     cursor: pointer;
     font-size: 50px;
+}
+
+.close-btn:hover{
+    color: white;
 }
 
 /* Define the animation for the image coming from the left */
