@@ -14,48 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /*****************
- *  Fade In/Out  *
- *****************/
-function fadeIn(element) {
-    element.style.opacity = 0;
-    element.style.display = "block";
-    let opacity = 0;
-    const startTime = performance.now();
-
-    function animate(currentTime) {
-        const elapsedTime = currentTime - startTime;
-        opacity = Math.min(1, elapsedTime / 500); // 500ms animation duration
-        element.style.opacity = opacity;
-
-        if (opacity < 1) {
-            requestAnimationFrame(animate);
-        }
-    }
-
-    requestAnimationFrame(animate);
-}
-
-function fadeOut(element) {
-    element.style.opacity = 1;
-    let opacity = 1;
-    const startTime = performance.now();
-
-    function animate(currentTime) {
-        const elapsedTime = currentTime - startTime;
-        opacity = Math.max(0, 1 - elapsedTime / 500); // 500ms animation duration
-        element.style.opacity = opacity;
-
-        if (opacity > 0) {
-            requestAnimationFrame(animate);
-        } else {
-            element.style.display = "none";
-        }
-    }
-
-    requestAnimationFrame(animate);
-}
-
-/*****************
  *  Menu Button  *
  *****************/
 // Toggle the menu button
@@ -271,7 +229,7 @@ const isSmallScreen = window.innerWidth < 1024;
 const observer = new IntersectionObserver(handleIntersection, {
     root: null, // Use the viewport as the root
     rootMargin: '0px', // No margin
-    threshold: isSmallScreen ? 0.3 : 0.6 // Adjusted threshold based on screen size
+    threshold: isSmallScreen ? 0.3 : 0.5 // Adjusted threshold based on screen size
 });
 
 // Target all sections with the 'animated-section' class
@@ -331,3 +289,20 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector("header").classList.remove("header-dark-background");
     }
 });
+
+const contact = document.getElementById('contact');
+const contactButton = document.getElementById('contactButton');
+const contactCloseButton = document.getElementById('contactCloseButton');
+
+if (contactButton) {
+    contactButton.addEventListener('click', () => {
+        const currentDisplay = getComputedStyle(contact).getPropertyValue('display');
+        contact.style.display = (currentDisplay === 'none') ? 'block' : 'none';
+    });
+}
+
+if (contactCloseButton) {
+    contactCloseButton.addEventListener('click', () => {
+        contact.style.display = 'none';
+    });
+}
