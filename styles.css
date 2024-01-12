@@ -353,14 +353,7 @@ desc{
 
 .icons a:hover{
     color: white !important;
-    /* box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2); */
-    /* transform: translateY(-2px); */
 }
-
-/* .icons a:active {
-    box-shadow: none;
-    transform: translateY(0);
-} */
 
 .btn {
     display: flex;
@@ -373,6 +366,7 @@ desc{
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s;
+    animation: fadeIn 1s ease;
 }
 
 .btn a{
@@ -404,6 +398,7 @@ name {
     padding: 10px 10px;
     font-size: 32px;
     font-family: 'NanumS', sans-serif;
+    animation: fadeIn 1s ease;
 }
 
 a {
@@ -439,7 +434,7 @@ name a {
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: none;
     float: left;
-    animation: slideInFromLeft 1s ease; 
+    animation: fadeIn 1s ease; 
 }
 
 .biglogo{
@@ -1104,7 +1099,6 @@ button#backToTopBtn:hover {
         width: 100%;
         border-radius: 50%;
         position: relative;
-        /* margin-top: 40px; */
     }
 
     .biglogo img{
@@ -1119,7 +1113,6 @@ button#backToTopBtn:hover {
         font-size: 20px;
         width: 100%;
         position: relative;
-        /* margin-top: 320px; */
         padding-bottom: 20px;
         line-height: 1.5;
     }    
@@ -1137,7 +1130,6 @@ button#backToTopBtn:hover {
     
         display: flex;
         justify-content: flex-start;
-        /* margin-top: 20px; */
         position: fixed;
         left: 12%;
     }
@@ -1147,7 +1139,6 @@ button#backToTopBtn:hover {
         height: auto;
         box-shadow: none;
         float: right;
-        animation: none; 
     }
 
     .icons {
