@@ -18,7 +18,7 @@
     --grey: #a8a29c;
     --section: #BCAA9C;
     --collapsible: #D2C2B3;
-    --overlay: rgba(0, 0, 0, 0.9);
+    --overlay: #846d62;
     --imgborder: #846d62;
     --icon: rgb(228, 228, 228);
     --resume: #897367;
@@ -33,7 +33,7 @@
     --grey: #a8a29c;
     --section: #43372C;
     --collapsible: #372E24;
-    --overlay: rgba(0, 0, 0, 0.9);
+    --overlay: #2f261a;
     --imgborder: #4C3E33;
     --icon: rgb(228, 228, 228);
     --resume: #4C3E33;
@@ -1003,6 +1003,8 @@ button#backToTopBtn:hover {
         background-color: var(--background);
         height: 40px;
         padding: 10px;
+        display: inline-flex;
+        z-index: 2;
     }
 
     /* Show the menu button and hide the menu initially */
@@ -1016,41 +1018,59 @@ button#backToTopBtn:hover {
         float: left;
         left: 3%;
         width: 30px;
+        z-index: 2;
     }
     
+    #links{
+        display: contents;
+    }
+      
+    @keyframes openNav {
+        0%{
+            height: 60px;
+            opacity: 0;
+        }
+
+        100%{
+            height: 250px;
+            opacity: 1;
+        }
+    } 
+
     /* Position the menu container */
     nav {
         position: fixed;
-        padding: 20px 0px 0px 0px;
-        top: 50px;
-        width: 95%;
+        top: 54px;
+        left: 0;
+        width: 100%;
         text-align: center;
         background-color: var(--overlay);
-        z-index: 2;
+        z-index: 1;
         display: none; /* Hide the menu by default */
+        animation: openNav 0.25s ease-out;
     }
     
-    nav a {
-        font-size: 20px;
+    nav, nav a {
+        font-size: 24px;
     }
 
     nav a:hover {
-        font-size: 24px; /* Increase the font size on hover */
-        color: #846d62;
+        color: #AF9B8E;
     }
     
     /* Style for the active menu link (when the corresponding section is in view) */
     nav a.active {
-        font-size: 24px;
-        color: #846d62;
+        font-size: 28px;
+        color: #AF9B8E;
     }
     
     /* Show the menu items when the menu is visible */
     nav.menu-visible {
         display: flex;
         flex-direction: column;
-        z-index: 3; /* Ensure the menu appears above the overlay */
+        z-index: 1;
     }
+
     /* Add a class for hiding the menu on mobile */
     nav.menu-hidden {
         display: none;
@@ -1124,21 +1144,23 @@ button#backToTopBtn:hover {
     
     /* Logo centered on top for mobile devices */
     .logo {
-        width: 100%;
         top: 5px;
         z-index: 3; /* Ensure the icons appear above other elements */
     
-        display: flex;
-        justify-content: flex-start;
+        display: table;
         position: fixed;
         left: 12%;
     }
 
     .logo img {
-        width: 50px; 
         height: auto;
         box-shadow: none;
         float: right;
+    }
+
+    #myLogo{
+        display: table-cell;
+        vertical-align: top;
     }
 
     .icons {
@@ -1146,14 +1168,10 @@ button#backToTopBtn:hover {
     }
 
     name{
-        width: 100%;
         top: 5px;
         z-index: 3; /* Ensure the icons appear above other elements */
     
-        display: flex;
-        justify-content: flex-start;
-        /* margin-top: 20px; */
-        position: fixed;
+        display: table-cell;
         left: 24%;
     }
     

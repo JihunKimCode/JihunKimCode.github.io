@@ -42,8 +42,10 @@ const menuBtn = document.getElementById("menuBtn");
 menuBtn.addEventListener("click", function() {
     if (menuBtn.innerHTML === "☰") {
         menuBtn.innerHTML = "✕";
+        handleHeaderColorChange();
     } else {
         menuBtn.innerHTML = "☰";
+        handleHeaderColorChange();
     }
 });
 
@@ -75,19 +77,19 @@ function handleHeaderColorChange() {
     const isDarkModeEnabled = document.body.classList.contains("dark-mode");
 
     // Calculate target colors based on scroll position and dark mode state
-    const targetHeaderColor = scrollTop > scrollThreshold
+    const targetHeaderColor = (scrollTop > scrollThreshold || menuBtn.innerHTML === "✕")
         ? (isDarkModeEnabled ? darkModeColors.bright : lightModeColors.dark)
         : (isDarkModeEnabled ? darkModeColors.dark : lightModeColors.bright);
 
-    const targetBtnBgColor = scrollTop > scrollThreshold
+    const targetBtnBgColor = (scrollTop > scrollThreshold || menuBtn.innerHTML === "✕")
         ? (isDarkModeEnabled ? darkModeColors.bright : lightModeColors.dark)
         : (isDarkModeEnabled ? darkModeColors.dark : lightModeColors.bright);
 
-    const targetBtnTextColor = scrollTop > scrollThreshold
+    const targetBtnTextColor = (scrollTop > scrollThreshold || menuBtn.innerHTML === "✕")
         ? (isDarkModeEnabled ? darkModeColors.name : lightModeColors.bright)
         : (isDarkModeEnabled ? darkModeColors.name : lightModeColors.dark);
 
-    const targetLinkColor = scrollTop > scrollThreshold
+    const targetLinkColor = (scrollTop > scrollThreshold || menuBtn.innerHTML === "✕")
         ? (isDarkModeEnabled ? darkModeColors.name : lightModeColors.bright)
         : (isDarkModeEnabled ? darkModeColors.name : lightModeColors.dark);
 
