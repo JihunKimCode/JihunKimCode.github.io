@@ -20,6 +20,13 @@ document.addEventListener('DOMContentLoaded', function() {
 document.getElementById("menuBtn").addEventListener("click", () => {
     const nav = document.querySelector("nav");
     nav.classList.toggle("menu-visible");
+    if (menuBtn.innerHTML === "☰") {
+        menuBtn.innerHTML = "✕";
+        handleHeaderColorChange();
+    } else {
+        menuBtn.innerHTML = "☰";
+        handleHeaderColorChange();
+    }
 });
 
 // Close the menu when clicking outside of it
@@ -31,21 +38,11 @@ document.body.addEventListener("click", (event) => {
         nav.classList.remove("menu-visible");
         if (menuBtn.innerHTML === "☰") {
             menuBtn.innerHTML = "✕";
+            handleHeaderColorChange();
         } else {
             menuBtn.innerHTML = "☰";
+            handleHeaderColorChange();
         }
-    }
-});
-
-const menuBtn = document.getElementById("menuBtn");
-
-menuBtn.addEventListener("click", function() {
-    if (menuBtn.innerHTML === "☰") {
-        menuBtn.innerHTML = "✕";
-        handleHeaderColorChange();
-    } else {
-        menuBtn.innerHTML = "☰";
-        handleHeaderColorChange();
     }
 });
 
