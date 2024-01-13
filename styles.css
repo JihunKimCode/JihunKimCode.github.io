@@ -1058,6 +1058,10 @@ button#backToTopBtn:hover {
         font-size: 24px;
     }
 
+    nav a{
+        margin-right: 0;
+    }
+
     nav a:hover {
         color: #AF9B8E;
     }
