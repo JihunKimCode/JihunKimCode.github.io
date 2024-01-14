@@ -97,7 +97,7 @@ section{
 }
 
 nav {
-    color: #a8a29c;
+    color: var(--grey);
     width: 70%;
     display: flex;
     justify-content: center;
@@ -107,7 +107,7 @@ nav {
     margin-top: 5px;
 }
 nav a {
-    color: #a8a29c;
+    color: var(--grey);
     font-size: 28px;
     text-decoration: none;
     margin-right: 10px;
@@ -1052,6 +1052,7 @@ button#backToTopBtn:hover {
         z-index: 1;
         display: none; /* Hide the menu by default */
         animation: openNav 0.25s ease-out;
+        box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2);
     }
     
     nav, nav a {
