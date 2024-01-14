@@ -15,7 +15,8 @@
 :root{
     --background: #f9ecdb;
     --white: #fff;
-    --grey: #a8a29c;
+    --grey: #c2c2c2;
+    --brownText: #BCAA9C;
     --section: #BCAA9C;
     --collapsible: #D2C2B3;
     --overlay: #846d62;
@@ -30,7 +31,8 @@
 .dark-mode {
     --background: #221D16;
     --white: #fff;
-    --grey: #a8a29c;
+    --grey: #c2c2c2;
+    --brownText: #af9b8e;
     --section: #43372C;
     --collapsible: #372E24;
     --overlay: #2f261a;
@@ -65,7 +67,7 @@
 
 /* Scroll Bar Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #af9b8e;  
+    background: var(--brownText);  
 }
 
 body {
@@ -117,14 +119,14 @@ nav a {
 }
 
 nav a:hover {
-    font-size: 36px; /* Increase the font size on hover */
-    color: #AF9B8E;
+    font-size: 34px; /* Increase the font size on hover */
+    color: var(--brownText);
 }
 
 /* Style for the active menu link (when the corresponding section is in view) */
 nav a.active {
-    font-size: 36px;
-    color: #AF9B8E;
+    font-size: 34px;
+    color: var(--brownText);
 }
 
 /* Add a class for hiding the menu on mobile */
@@ -1064,13 +1066,14 @@ button#backToTopBtn:hover {
     }
 
     nav a:hover {
-        color: #AF9B8E;
+        color: var(--brownText);
+        font-size: 30px;
     }
     
     /* Style for the active menu link (when the corresponding section is in view) */
     nav a.active {
-        font-size: 28px;
-        color: #AF9B8E;
+        font-size: 30px;
+        color: var(--brownText);
     }
     
     /* Show the menu items when the menu is visible */
@@ -1078,6 +1081,8 @@ button#backToTopBtn:hover {
         display: flex;
         flex-direction: column;
         z-index: 1;
+        align-items: flex-start;
+        padding-left: 20px;
     }
 
     /* Add a class for hiding the menu on mobile */
