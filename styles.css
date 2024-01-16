@@ -592,6 +592,21 @@ name a {
     text-decoration: underline;
 }
 
+.skillLogoContainer{
+    display: flow-root;
+    width: 100%;
+}
+
+.skillLogo{
+    display: block;
+    border-width: 2px;
+    border-radius: 25px;
+    box-shadow: none;
+    background-color: #fff;
+    margin: 5px;
+    width: auto;
+}
+
 .education .image-container {
     display: flex;
     justify-content: center;
