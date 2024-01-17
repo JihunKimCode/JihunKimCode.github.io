@@ -308,3 +308,12 @@ if (contactCloseButton) {
         contact.style.display = 'none';
     });
 }
+
+/**********************
+ *  Smooth Hyperlink  *
+ **********************/
+function scrollToSection(link) {
+    event.preventDefault();
+    var sectionId = link.getAttribute('href').substring(1); // Remove the '#' from the href
+    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+}

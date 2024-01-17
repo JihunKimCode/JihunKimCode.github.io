@@ -26,6 +26,7 @@
     --resumehov: #9D897C;
     --text: #000;
     --buttonhov: #fff;
+    --timeline: #fff;
 }
 
 .dark-mode {
@@ -42,6 +43,7 @@
     --resumehov: #43372C;
     --text: rgb(228, 228, 228, 0.87);
     --buttonhov: #000;
+    --timeline: rgb(228, 228, 228, 0.87);
 }
 
 /* Scroll Bar Width */
@@ -715,6 +717,152 @@ button {
     font-weight: bold;
 }
 
+.timeline {
+    margin-top: 50px;
+    position: relative;
+    white-space: nowrap;
+    padding: 0 10px;
+    display: grid;
+    animation: fadeIn 1s ease;
+}
+
+.timeline ol {
+    font-size: 0;
+    padding: 300px 0;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.timeline #experience{
+    padding: 100px 0px 380px 0px;
+}
+
+.timeline #awards{
+    padding: 150px 0px 350px 0px;
+}
+
+.timeline ol li {
+    position: relative;
+    display: inline-block;
+    list-style-type: none;
+    width: 250px;
+    height: 3px;
+    background: #846d62;
+    scroll-snap-align: start;
+}
+
+.timeline ol li:first-child {
+    margin-left: 10px;
+    width: 50px;
+}
+
+.timeline ol li:last-child {
+    width: 340px;
+}
+
+.timeline ol li:not(:first-child) {
+    margin-left: 10px;
+}
+  
+.timeline ol li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 1px);
+    bottom: 0;
+    width: 8px;
+    height: 8px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: #846d62;
+    z-index: 1;
+}
+  
+.timeline .indexGroup,
+.timeline .indexPersonal {
+    position: absolute;
+    left: calc(100% + 7px);
+    width: 250px;
+    font-size: 1rem;
+    white-space: normal;
+    color: black;
+    background: var(--timeline);
+    border-radius: 0 10px 10px 10px;
+
+    display: inline-block;
+    box-sizing: border-box;
+    box-shadow: 0 6px 6px 0 rgba(0,0,0,0.2);
+}
+
+.timeline .indexGroup img,
+.timeline .indexPersonal img {
+    display: block;
+    width: 100%;
+    margin: 0;
+    object-fit: cover;
+    background-color: var(--timeline);
+    border-width: 0px;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: none;
+}
+
+.timeline .indexGroup .info,
+.timeline .indexPersonal .info {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-size: 1rem;
+    color: black !important;
+    border-radius: 0 10px 10px 10px;
+}
+
+.timeline .indexGroup .info p,
+.timeline .indexPersonal .info p{
+    margin-block: 0px;
+}
+
+.timeline .indexGroup::before,
+.timeline .indexPersonal::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+  
+.timeline .indexGroup {
+    top: -16px;
+    transform: translateY(-100%);
+    border-radius: 10px 10px 10px 0;
+}
+  
+.timeline .indexGroup::before {
+    top: 100%;
+    border-width: 8px 8px 0 0;
+    border-color: var(--timeline) transparent transparent transparent;
+}
+  
+.timeline .indexPersonal {
+    top: calc(100% + 16px);
+}
+  
+.timeline .indexPersonal::before {
+    top: -8px;
+    border-width: 8px 0 0 8px;
+    border-color: transparent transparent transparent var(--timeline);
+}
+  
+.timeline time {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 5px 0px;
+    color: brown;
+}
+
 h3{
     font-family: 'NanumB', sans-serif;
     font-size: 24px;
@@ -822,7 +970,7 @@ li{
     text-align: center;
     position: relative;
     display: block;
-    margin-top: 80px;
+    margin-top: 60px;
 }
 
 .projsect-text {
@@ -946,10 +1094,6 @@ button#backToTopBtn:hover {
 
 /* Styles for tablets (screen sizes between 768px and 1023px) */
 @media (min-width: 768px) and (max-width: 1200px) {
-    .projsect{
-        margin-top: 120px;
-    }
-
     .imgdesc{
         display: flex;
         flex-wrap: wrap;
@@ -1009,6 +1153,15 @@ button#backToTopBtn:hover {
     .img-popup img {
         max-width: 80%;
         height: auto;
+    }
+    .timeline ol {
+        padding: 320px 0;
+    }    
+    .timeline #experience{
+        padding: 120px 0px 380px 0px;
+    }    
+    .timeline #awards{
+        padding: 190px 0px 350px 0px;
     }
 }
 
@@ -1327,7 +1480,6 @@ button#backToTopBtn:hover {
         text-align: center;
         position: relative;
         display: block;
-        margin-top: 70px;
     }
     
     .projsect-text {
