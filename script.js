@@ -279,6 +279,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Add a class to the header for darkened background
         document.querySelector("header").classList.add("header-dark-background");
+
+        // Disable scroll on the main page
+        document.body.style.overflow = "hidden";
     }
 
     function hideImage() {
@@ -286,6 +289,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Remove the darkened background class from the header
         document.querySelector("header").classList.remove("header-dark-background");
+
+        // Enable scroll on the main page
+        document.body.style.overflow = "auto";
     }
 });
 
