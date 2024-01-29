@@ -644,6 +644,16 @@ name a {
     visibility: visible;
 }
 
+.left{
+    width: auto;
+    float: left;
+    font-size: 20px;
+}
+.right{
+    width: auto;
+    float: right;
+}
+
 .education .image-container {
     display: flex;
     justify-content: center;
