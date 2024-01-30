@@ -151,6 +151,18 @@
                     </a>
                 </li>
                 <li>
+                    <a href="#digitRecognizer" onclick="scrollToSection(this)">
+                        <div class="indexPersonal">
+                            <img src="../Images/Projects/Digit Recognizer Correct.png" alt="Digit Recognizer Correct">
+                            <div class="info">
+                                <time>Nov 2023</time> 
+                                <p><strong>Digit Recognizer Using CNN</strong></p>
+                                <p>Kaggle, Python; Machine Learning </p>
+                            </div>        
+                        </div>
+                    </a>
+                </li>
+                <li>
                     <a href="#publicFacing" onclick="scrollToSection(this)">
                         <div class="indexPersonal">
                             <img src="../Images/Projects/public-facing project.png" alt="public-facing">
@@ -715,7 +727,69 @@
                     </desc>
                 </div>
             </section>
-
+            <!-- Digit Recognizer -->
+            <section id="digitRecognizer" class="animated-section imgdesc">
+                <div class="img">
+                    <img src="../Images/Projects/Digit Recognizer Correct.png" alt="Digit Recognizer Correct">
+                    <img src="../Images/Projects/Digit Recognizer Incorrect.png" alt="Digit Recognizer Incorrect">
+                </div>
+                <div class="desc">
+                    <desc>
+                        <h3>Digit Recognizer Using CNN</h3>
+                        <div class="skillLogoContainer">
+                            <div class="left">
+                                <div class="tooltip">
+                                    <img class="skillLogo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kaggle/kaggle-original-wordmark.svg" height="40" alt="Kaggle"  />
+                                    <span class="tooltiptext">Kaggle</span>
+                                </div>
+                                <div class="tooltip">
+                                    <img class="skillLogo" src="https://skillicons.dev/icons?i=py" height="40" alt="Python"  />
+                                    <span class="tooltiptext">Python</span>
+                                </div>
+                                <div class="tooltip">
+                                    <img class="skillLogo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" height="40" alt="Jupyter Notebook"  />
+                                    <span class="tooltiptext">Jupyter Notebook</span>
+                                </div>
+                                <div class="tooltip">
+                                    <img class="skillLogo" src="https://skillicons.dev/icons?i=sklearn" height="40" alt="sklearn"  />
+                                    <span class="tooltiptext">scikit-learn</span>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <p>Nov 2023</p>
+                                <p class="buttons">
+                                    <a href="https://www.kaggle.com/competitions/digit-recognizer" target="_blank" rel="noopener noreferrer">
+                                        <button class="button" role="button">
+                                            <i class="fa-solid fa-up-right-from-square"></i> Kaggle Competition
+                                        </button>
+                                    </a>
+                                    <a href="../Images/Projects/Digit Recognizer CM Prediction.png" target="_blank" rel="noopener noreferrer">
+                                        <button class="button" role="button">
+                                            <i class="fa-solid fa-image"></i> Confusion Matrix
+                                        </button>
+                                    </a>
+                                    <a href="https://www.notion.so/Digit-Recognizer-994e3770a72c494384fe160061bebc64?pvs=4" target="_blank" rel="noopener noreferrer">
+                                        <button class="button" role="button">
+                                            <i class="fa-solid fa-file-zipper"></i> Source Code
+                                        </button>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <p>
+                                The goal of this Kaggle competition is to take an image of a handwritten single digit and determine what that digit is.
+                                This competition is evaluated on the categorization accuracy of the predictions.
+                            </p>
+                            <p>
+                                Using my understanding of <a href="awards.html#olcf" rel="noopener noreferrer">Convolutional Neural Network (CNN)</a>, 
+                                I implemented <span id="highlight">CNN model using Python</span> to predict handwritten single digit and compare it to actual digit. 
+                                My CNN Model shows <strong>98-99% of accuracy</strong> to predict correct digit. I made a confusion matrix to visualize the accuracy as well.
+                            </p>
+                        </div>
+                    </desc>
+                </div>
+            </section>
             <!-- Virtual Portfolio -->
             <section id="virtualPortfolio" class="animated-section imgdesc">
                 <div class="img">
