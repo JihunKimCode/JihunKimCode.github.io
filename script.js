@@ -251,8 +251,8 @@ document.addEventListener("DOMContentLoaded", function () {
     sections.forEach((section) => {
         const images = section.querySelectorAll(".img img");
         images.forEach((image) => {
-            image.addEventListener("click", () => {
-                showImage(image.src);
+            image.addEventListener("click", (event) => {
+                showImage(image.src, event.clientX, event.clientY);
             });
         });
     });
@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    function showImage(src) {
+    function showImage(src, clickX, clickY) {
         const imgElement = document.createElement("img");
         imgElement.src = src;
 
@@ -282,6 +282,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Disable scroll on the main page
         document.body.style.overflow = "hidden";
+
+        // Calculate the position of the click relative to the image
+        const relativeX = clickX - imgElement.getBoundingClientRect().left;
+        const relativeY = clickY - imgElement.getBoundingClientRect().top;
+
+        // Adjust the transform origin based on the click position
+        const transformOriginX = (relativeX / imgElement.width) * 100 + '%';
+        const transformOriginY = (relativeY / imgElement.height) * 100 + '%';
+        imgElement.style.transformOrigin = transformOriginX + ' ' + transformOriginY;
     }
 
     function hideImage() {

@@ -260,6 +260,15 @@ desc{
     transform: translateX(0);
 }
 
+@keyframes smallToBig {
+    0% {
+        transform: scale(0.75);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 /* Styles for the image pop-up */
 .img-popup {
     display: none;
@@ -283,6 +292,7 @@ desc{
     border-width: 4px;
     background-color: var(--section);
     position: relative;
+    animation: smallToBig 0.5s ease;
 }
 
 /* Style for darkened header background */
