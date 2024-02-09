@@ -667,6 +667,10 @@ name a {
     font-style: italic;
 }
 
+.right p{
+    margin: 3px !important;
+}
+
 .members p{
     font-weight: bold;
     text-align: left;
