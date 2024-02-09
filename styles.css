@@ -663,12 +663,13 @@ name a {
     display: grid;
     width: auto;
     float: right;
+    justify-items: end;
+    font-style: italic;
 }
 
-.collab p{
-    font-style: normal !important;
+.members p{
     font-weight: bold;
-    text-align: left !important;
+    text-align: left;
 }
 
 .education .image-container {
@@ -943,8 +944,6 @@ li{
 }
 
 .desc p{
-    font-style: italic;
-    text-align: right;
     margin: 5px 0px;
 }
 
