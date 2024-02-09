@@ -660,8 +660,15 @@ name a {
     font-size: 20px;
 }
 .right{
+    display: grid;
     width: auto;
     float: right;
+}
+
+.collab p{
+    font-style: normal !important;
+    font-weight: bold;
+    text-align: left !important;
 }
 
 .education .image-container {
