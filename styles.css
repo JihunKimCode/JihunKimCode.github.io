@@ -577,7 +577,7 @@ name a {
 
 .education{
     display: table-cell;
-    width: 49%;
+    width: 49.5%;
     padding: 10px;
     background-color: var(--section);
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -589,7 +589,7 @@ name a {
 
 .skills{
     display: table-cell;
-    width: 49%;
+    width: 49.5%;
     padding: 15px;
     background-color: var(--section);
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
