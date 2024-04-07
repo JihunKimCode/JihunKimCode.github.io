@@ -203,7 +203,7 @@ img{
 }
 
 h2 {
-    font-size: 52px;
+    font-size: 48px;
     animation: slideInFromRight 1s ease; 
     margin: 20px 0px;
 }
@@ -218,7 +218,7 @@ desc{
     width: 100%;
     float: right;
     font-family: 'NanumB', sans-serif;
-    font-size: 24px;
+    font-size: 16pt;
     line-height: 1.5;
     /* animation: slideInFromRight 1s ease; */
     color: var(--text);
