@@ -315,6 +315,11 @@ if (contactButton) {
     contactButton.addEventListener('click', () => {
         const currentDisplay = getComputedStyle(contact).getPropertyValue('display');
         contact.style.display = (currentDisplay === 'none') ? 'block' : 'none';
+        if (currentDisplay === 'none') {
+            contactButton.innerHTML = '<i class="fa-solid fa-address-book"></i> Hide Contact Infos';
+        } else {
+            contactButton.innerHTML = '<i class="fa-solid fa-address-book"></i> Show Contact Infos';
+        }
     });
 }
 
