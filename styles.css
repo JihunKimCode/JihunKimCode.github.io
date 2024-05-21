@@ -12,6 +12,11 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Ridi';
+    src: url('fonts/RIDIBatang.otf');
+}
+
 :root{
     --background: #f9ecdb;
     --white: #fff;
@@ -51,8 +56,8 @@
     scroll-behavior: smooth;
     height: calc(100% - 3em);
     overflow-y: auto;
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
 }
 
 /* Scroll Bar Track */
@@ -217,7 +222,7 @@ desc{
     display: table-cell;
     width: 100%;
     float: right;
-    font-family: 'NanumB', sans-serif;
+    font-family: 'Ridi', sans-serif;
     font-size: 16pt;
     line-height: 1.5;
     /* animation: slideInFromRight 1s ease; */
@@ -511,7 +516,7 @@ name a {
 }
 
 .address {
-    font-family: 'NanumB', sans-serif;
+    font-family: 'Ridi', sans-serif;
     font-size: 24px;
     justify-content: center;
     /* margin-top: 10px; */
@@ -538,7 +543,7 @@ name a {
 
     margin-top: 30px;
     font-size: 32px;
-    font-family: 'NanumB', sans-serif;
+    font-family: 'Ridi', sans-serif;
     animation: slideInFromTop 1s ease; 
 }
 
@@ -625,6 +630,7 @@ name a {
 }
 
 .tooltip .tooltiptext {
+    font-family: 'NanumS', sans-serif;
     visibility: hidden;
     background-color: rgba(0,0,0,0.8);
     color: #fff;
@@ -702,7 +708,7 @@ name a {
     font-size: 28px;
     margin-top: 0px;
     margin-bottom: 10px;
-    font-family: 'NanumB', sans-serif;
+    font-family: 'Ridi', sans-serif;
     line-height: 1.2;
 }
 
@@ -716,6 +722,7 @@ name a {
 
 /*Remove default button design*/
 button {
+    font-family: 'Ridi', sans-serif;
 	background: none;
 	border: none;
 	cursor: pointer;
@@ -727,7 +734,7 @@ button {
 }
 
 .collapsible {
-    font-family: 'NanumB', sans-serif;
+    font-family: 'Ridi', sans-serif;
     color: var(--text);
     cursor: pointer;
     padding: 18px;
@@ -768,7 +775,7 @@ button {
 }
 
 .content h1{
-    font-family: 'NanumB', sans-serif;
+    font-family: 'Ridi', sans-serif;
     line-height: 1;
     font-size: 20px;
 }
@@ -788,7 +795,6 @@ button {
     margin-top: 50px;
     position: relative;
     white-space: nowrap;
-    padding: 0 10px;
     display: grid;
     animation: fadeIn 1s ease;
 }
@@ -931,13 +937,13 @@ button {
 }
 
 h3{
-    font-family: 'NanumB', sans-serif;
+    font-family: 'Ridi', sans-serif;
     font-size: 24px;
     margin-bottom: 9px;
 }
 
 li{
-    font-family: 'NanumB', sans-serif;
+    font-family: 'Ridi', sans-serif;
     line-height: 1.7;
     font-size: 20px;
 }
@@ -1039,6 +1045,7 @@ li{
 }
 
 .projsect-text {
+    font-family: 'NanumS', sans-serif;
     background-color: var(--background);
     padding: 0 10px;
     position: absolute;
@@ -1383,7 +1390,7 @@ button#backToTopBtn:hover {
     }
 
     desc{
-        font-family: 'NanumB', sans-serif;
+        font-family: 'Ridi', sans-serif;
         font-size: 20px;
         width: 100%;
         position: relative;
@@ -1510,7 +1517,7 @@ button#backToTopBtn:hover {
     }
     .resume h2 {
         font-size: 28px;
-        font-family: 'NanumB', sans-serif;
+        font-family: 'Ridi', sans-serif;
         animation: slideInFromLeft 1s ease; 
     }
 
@@ -1524,6 +1531,7 @@ button#backToTopBtn:hover {
     }
     
     .sect-text {
+        font-family: 'NanumS', sans-serif;
         background-color: var(--background);
         padding: 0 10px;
         position: absolute;
