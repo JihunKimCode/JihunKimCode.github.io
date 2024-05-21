@@ -675,6 +675,9 @@ name a {
 
 .right p{
     margin: 3px !important;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
 }
 
 .members p{
