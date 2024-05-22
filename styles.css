@@ -609,6 +609,11 @@ name a {
     text-decoration: underline;
 }
 
+.skillLogos{
+    display: flow-root;
+    width: 100%;
+}
+
 .skillLogoContainer{
     display: grid;
     grid-template-columns: auto 1fr;
