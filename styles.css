@@ -696,6 +696,7 @@ name a {
 
 .right .button {
     margin-left: 5px;
+    margin-top: 5px;
 }
 
 .members p{
@@ -1583,10 +1584,6 @@ button#backToTopBtn:hover {
     .skillLogoContainer{
         display: flow-root;
     }
-
-    .right .button {
-        margin-bottom: 5px;
-    }    
 
     .footicons{
         font-size: 32px;
