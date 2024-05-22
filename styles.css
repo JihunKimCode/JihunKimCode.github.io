@@ -610,8 +610,16 @@ name a {
 }
 
 .skillLogoContainer{
-    display: flow-root;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: stretch;
     width: 100%;
+    height: auto;
+}
+
+.skillLogoContainer:not(:has(.left)) .right {
+    grid-column: 1 / -1;
+    justify-content: flex-end;
 }
 
 .skillLogo{
@@ -661,13 +669,14 @@ name a {
 }
 
 .left{
-    width: auto;
-    float: left;
+    grid-column: 1;
     font-size: 20px;
 }
+
 .right{
     display: grid;
     width: auto;
+    height: auto;
     float: right;
     justify-items: end;
     font-style: italic;
@@ -678,6 +687,10 @@ name a {
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
+}
+
+.right .button {
+    margin-left: 5px;
 }
 
 .members p{
@@ -1561,6 +1574,14 @@ button#backToTopBtn:hover {
     .projsect-text {
         font-size: 24px;
     }
+
+    .skillLogoContainer{
+        display: flow-root;
+    }
+
+    .right .button {
+        margin-bottom: 5px;
+    }    
 
     .footicons{
         font-size: 32px;
