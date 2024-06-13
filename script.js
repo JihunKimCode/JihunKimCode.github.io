@@ -228,7 +228,7 @@ const isSmallScreen = window.innerWidth < 1024;
 const observer = new IntersectionObserver(handleIntersection, {
     root: null, // Use the viewport as the root
     rootMargin: '0px', // No margin
-    threshold: isSmallScreen ? 0.3 : 0.5 // Threshold based on screen size
+    threshold: isSmallScreen ? 0.1 : 0.5 // Threshold based on screen size
 });
 
 // Target all sections with the 'animated-section' class

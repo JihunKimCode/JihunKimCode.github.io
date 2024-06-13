@@ -182,7 +182,7 @@ main {
 .img {
     display: table-cell;
     width: 30%;
-    padding-left: 20px; 
+    padding-left: 10px; 
     padding-right: 20px; 
 }
 
@@ -190,7 +190,11 @@ main {
     display: table-cell;
     width: 70%; 
     padding-left: 20px; 
-    padding-right: 20px; 
+    padding-right: 10px; 
+}
+
+.desc h3{
+    margin-block-start: 20px;
 }
 
 img{
@@ -291,6 +295,7 @@ desc{
 .img-popup img {
     width: auto;
     max-width: 90%;
+    margin-top: 0px;
     height: auto;
     max-height: 90%;
     border-radius: 5px;
@@ -971,7 +976,7 @@ li{
 }
 
 .desc h3{
-    font-size: 32px;
+    font-size: 28px;
     text-align: center;
 }
 
@@ -1075,7 +1080,7 @@ li{
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    font-size: 28px;
+    font-size: 24px;
     color: var(--text);
 }
 
@@ -1191,7 +1196,7 @@ button#backToTopBtn:hover {
     .imgdesc{
         display: flex;
         flex-wrap: wrap;
-        margin-top: 80px;
+        margin-top: 25px;
     }
 
     .img{
@@ -1210,7 +1215,7 @@ button#backToTopBtn:hover {
         border-width: 3px;
         width: 48%;
         height: auto;
-        margin: 40px 0px 10px 0px;
+        margin: 20px 0px 0px 0px;
     }
 
     .desc{
@@ -1245,11 +1250,10 @@ button#backToTopBtn:hover {
     }
 
     .img-popup img {
-        max-width: 80%;
         height: auto;
     }
     .timeline ol {
-        padding: 320px 0;
+        padding: 360px 0 300px 0;
     }    
     .timeline #experience{
         padding: 120px 0px 380px 0px;
@@ -1370,6 +1374,36 @@ button#backToTopBtn:hover {
         z-index: 3;
     }
 
+    .timeline ol {
+        padding: 250px 0;
+    }
+
+    .timeline #experience {
+        padding: 150px 0px 330px 0px;
+    }
+
+    .timeline #awards {
+        padding: 150px 0px 280px 0px;
+    }
+
+    .timeline ol li {
+        width: 160px;
+    }
+
+    .timeline ol li:last-child{
+        width: 200px;
+    }
+
+    .timeline .indexGroup .info,
+    .timeline .indexPersonal .info,
+    .timeline time {
+        font-size: 13px;
+    }
+
+    .timeline .indexGroup, .timeline .indexPersonal{
+        width: 150px;
+    }
+
     .imgdesc{
         display: flex;
         flex-wrap: wrap;
@@ -1387,7 +1421,7 @@ button#backToTopBtn:hover {
 
     .img img{
         border-width: 3px;
-        margin: 40px 0px 10px 0px;
+        margin: 20px 0px 0px 0px;
     }
 
     .desc{
@@ -1413,12 +1447,20 @@ button#backToTopBtn:hover {
 
     desc{
         font-family: 'Ridi', sans-serif;
-        font-size: 20px;
+        font-size: 18px;
         width: 100%;
         position: relative;
-        padding-bottom: 20px;
+        /* padding-bottom: 20px; */
         line-height: 1.5;
     }    
+
+    desc .left{
+        font-size: 18px;
+    }
+
+    .button{
+        font-size: 16px;
+    }
     
     h2 {
         font-size: 32px;
