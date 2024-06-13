@@ -1389,6 +1389,10 @@ button#backToTopBtn:hover {
     .timeline ol li {
         width: 160px;
     }
+    
+    .timeline ol li:first-child {
+        width: 20px;
+    }    
 
     .timeline ol li:last-child{
         width: 200px;
