@@ -620,8 +620,9 @@ ul {
 }
 
 .skillLogos{
-    display: flow-root;
+    display: flex;
     width: 100%;
+    margin-top: 5px;
 }
 
 .skillLogoContainer{
@@ -643,8 +644,13 @@ ul {
     border-radius: 25px;
     box-shadow: none;
     background-color: #fff;
-    margin: 3px;
+    margin-top: 3px;
+    margin-right: 5px;
     width: auto;
+}
+
+.left .skillLogo{
+    margin-right: 0px;
 }
 
 .tooltip {
@@ -665,7 +671,7 @@ ul {
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
-    top: 110%;
+    top: 120%;
     left: 10%;
 }
 
@@ -808,7 +814,7 @@ button {
 
 .content h1{
     font-family: 'Ridi', sans-serif;
-    line-height: 1;
+    line-height: 1.2;
     font-size: 20px;
     margin-block: 10px;
 }
