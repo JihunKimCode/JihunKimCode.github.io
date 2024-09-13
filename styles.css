@@ -634,12 +634,13 @@ ul {
     width: 50px;
     object-fit: cover;
     border-width: 2px;
-    margin: 10px;
+    margin: 10px 0px 10px 10px;
     background-color: white;
 }
 
 .tools h3{
     margin-block-start: 0px;
+    margin-left: 10px;
 }
 
 .tools .content h3{
@@ -650,6 +651,7 @@ ul {
     display: flex;
     font-size: 28px;
     align-items: center;
+    color: var(--text);
 }
 
 .edu .content, .tools .content {
