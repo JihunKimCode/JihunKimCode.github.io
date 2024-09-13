@@ -678,11 +678,10 @@ ul {
     font-family: 'Ridi', sans-serif;
     color: var(--text);
     display: table-cell;
-    width: 100%;
+    width: 33%;
     line-height: 1.7;
     font-size: 20px;
     margin-left: 10px;
-    margin-right: 100px;
 }
 
 .skills{
@@ -1389,6 +1388,11 @@ button#backToTopBtn:hover {
         flex-direction: column;
         width: 100%;
     }    
+
+    .courseContent{
+        width: 100%;
+    }
+
     .skillsect {
         margin-top: 110px;
         margin-bottom: 35px;
@@ -1715,6 +1719,10 @@ button#backToTopBtn:hover {
         flex-direction: column;
         width: 90%;
     }    
+
+    .courseContent{
+        width: 100%;
+    }
 
     ul, li{
         font-size: 18px;
