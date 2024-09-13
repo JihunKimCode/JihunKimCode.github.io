@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Website Thumbnail Information -->
+    <title>Jihun Kim</title>
+    <meta property="og:url" content="https://jihunkimcode.github.io">
+    <meta property="og:title" content="Jihun Kim">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jihunkimcode.github.io/Images/JK.png">
+    <meta property="og:description" content="Virtual portfolio website created by Jihun Kim">
+    <!-- Website Information -->
+    <meta name="author" content="Jihun Kim">
+    <meta name="keywords" content="Jihun, Jihun Kim">
+    <meta name="description" content="Jihun Kim's virtual portfolio website. This website contains information about Jihun's education, skills, projects, and experiences.">
+    <!-- Website Settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../Images/JK.png">
+    <link rel="stylesheet" href="../styles.css">
+    <!-- Add Font Awesome CSS link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <button id="menuBtn">☰</button>
+        <div class="logo">
+            <div id="myLogo">
+                <a href="home.html">
+                    <img src="../Images/JK.png" alt="my Logo">
+                </a>
+            </div>
+            <name>
+                <a href="home.html">Jihun Kim</a>
+            </name>
+        </div>
+        <div id="links">
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="education.html" class="active">Education</a>
+                <a href="skills.html">Skills</a>
+                <a href="projects.html">Projects</a>
+                <a href="experiences.html">Experiences</a>
+                <a href="awards.html">Awards</a>
+            </nav>
+        </div>
+        <div class="icons">
+            <a class="btn btn-dark" onclick="darkmode()">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </a>
+            <a href="mailto:jiunkim8@gmail.com" class="btn btn-email" >
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jihunkimcode/" class="btn btn-linkedin" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/JihunKimCode" class="btn btn-github" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </header>
+    <main>
+        <!-- Degrees and Awards -->
+        <div class="skillsect">
+            <span class="skillsect-text">Degrees and Awards</span>
+            <hr class="skillsect-line">
+        </div>
+
+        <div class="educations">
+            <div class="edu">
+                    <img src="https://clarksvillehigh.cmcss.net/wp-content/uploads/sites/8/2018/07/IMG_2543.jpg" alt="Image 2" width="50px">
+                    <div class="content">
+                        <h3>Clarksville High School</h3>
+                        <ul>
+                            <li>Aug 2018 - May 2020</li>
+                            <li><b>GPA: 4.00/4.00</b></li>
+                            <li><a href="awards.html#honorChem" rel="noopener noreferrer">Outstanding Honors Chemistry Student</a></li>
+                            <li><a href="awards.html#highschoolAwards" rel="noopener noreferrer">4.0 GPA Award and Principal's Leadership Award</a></li>
+                        </ul>
+                    </div>
+              </div>
+              <div class="edu">
+                    <img src="../Images/Ayres_Hall_abree.jpg" alt="UTK" width="50px">
+                    <div class="content">
+                        <h3>University of Tennessee, Knoxville</h3>
+                        <ul>
+                            <li>Aug 2020 - May 2024</li>
+                            <li><b>Bachelor of Science in Computer Science</b></li>
+                            <li><b>GPA: 3.98/4.00</b></li>
+                            <li><b><a href="awards.html#deansList" rel="noopener noreferrer">Dean's List (Summa Cum Laude)</a></b>:</li>
+                            <ul><li>Fall 2020 - Spring 2023, Spring 2024</li></ul>
+                            <li><b><a href="awards.html#engFee" rel="noopener noreferrer">Engineering Scholarship</a></b>:</li>
+                            <ul><li>Fall 2021 - Spring 2024</li></ul>
+                        </ul>
+                    </div>
+              </div>
+              <div class="edu">
+                <img src="../Images/Ayres_Hall_abree.jpg" alt="UTK" width="50px">
+                <div class="content">
+                    <h3>University of Tennessee, Knoxville</h3>
+                    <ul>
+                        <li>Aug 2024 - May 2025</li>
+                        <li><b>Master of Science in Computer Science</b></li>
+                        <li><b>GPA: 4.00/4.00</b></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Courses -->
+        <div class="skillsect">
+            <span class="skillsect-text">Courses</span>
+            <hr class="skillsect-line">
+        </div>
+        <div class="courses">
+            <div class="collapsibleContent">
+                <button type="button" class="collapsible"><b>📚 Major: Computer Science</b></button>
+                <div class="content">
+                    <div class="courseContent">
+                        <b>Algorithm</b>
+                        <ul>
+                            <li>Data Structures & Algorithms</li>
+                            <li>Discrete Structures</li>                           
+                            <li>Algorithm Analysis and Automata</li>                           
+                        </ul>
+                    </div>
+                    <div class="courseContent">
+                        <b>Software</b>
+                        <ul>
+                            <li>Systems Programming</li>
+                            <li>Software Engineering</li>
+                            <li>Programming Languages and Systems</li>
+                        </ul>
+                    </div>
+                    <div class="courseContent">
+                        <b>Hardware</b>
+                        <ul>
+                            <li>Computer Organization</li>                           
+                            <li>Operating Systems</li>                           
+                            <li>Computer Systems Organization <span id="highlight">(Grad)</span></li>                           
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+            <div class="collapsibleContent">
+                <button type="button" class="collapsible"><b>📚 Minors: Cybersecurity & Machine Learning</b></button>
+                <div class="content">
+                    <div class="courseContent">
+                    <b>Cybersecurity</b>
+                        <ul>
+                            <li>Applied Cryptography</li>
+                            <li>Human Factors in Cybersecurity <span id="highlight">(Grad)</span></li>
+                            <li>Network Security <span id="highlight">(Grad)</span></li>
+                        </ul>
+                    </div>
+                    <div class="courseContent">
+                    <b>Machine Learning</b>
+                    <ul>
+                        <li>Fundamentals of Digital Archeology <span id="highlight">(Grad)</span></li>
+                        <li>Deep Learning</li>
+                        <li>Artificial Intelligence</li>
+                        <li>Biologically-Inspired Computation</li>
+                        <li>Natural Language Processing <span id="highlight">(Grad)</span></li>
+                        <li>Reinforcement Learning <span id="highlight">(Grad)</span></li>
+                        <li>Machine Learning <span id="highlight">(Grad)</span></li>
+                            <ul><li>Working as a <a href="experiences.html#graduateTA">Graduate Teaching Assisstant</a>.</li></ul>
+                    </ul>
+                    </div>
+                </div> 
+            </div>
+            <div class="collapsibleContent">
+                <button type="button" class="collapsible"><b>📚 Other Courses</b></button>
+                <div class="content">
+                    <ul>
+                        <li>Physics for Engineers</li>
+                            <ul><li>Worked as an <a href="experiences.html#undergraduateTA">Undergraduate Teaching Assisstant</a> as well.</li></ul>
+                        <li>Electricity and Magnetism</li>
+                        <li>Statistics</li>
+                        <li>Probability and Random Variables</li>
+                    </ul>
+                </div> 
+            </div>            
+        </div>
+        <!-- Club Activities -->
+        <div class="skillsect">
+            <span class="skillsect-text">Club Activities</span>
+            <hr class="skillsect-line">
+        </div>
+        <div class="educations">
+            <div class="edu">
+                <img src="https://www.eecs.utk.edu/wp-content/uploads/2021/07/Hack4_Impact_UTK_logo.jpeg" alt="H4I" width="50px">
+                <div class="content">
+                    <h3>Hack4Impact</h3>
+                    <ul>
+                        <!-- <li>Sep 2023 - May 2024</li> -->
+                        <li>Developed a website helping capture volunteer information and event management.</li>
+                        <li><a href="projects.html#compassionMinistries">Compassion Ministries</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="edu">
+                <img src="https://www.eecs.utk.edu/wp-content/uploads/2020/01/hack-utk-logo.png" alt="UTK" width="50px">
+                <div class="content">
+                    <h3>HackUTK</h3>
+                    <ul>
+                        <!-- <li>Aug 2021 - May 2024</li> -->
+                        <li>Learned about cybersecurity and the basic concepts of hacking.</li>
+                        <li>Helped to operate <a href="https://volhacks.org/" target="_blank" rel="noopener noreferrer">VOLHACKS V</a> as supporting participants.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="edu">
+                <img src="https://se-images.campuslabs.com/clink/images/d4a0d43a-c329-465b-bd92-037d914c01081bcc751d-e0e3-4e8d-b79b-d56b786f7a0d.jpg?preset=med-sq" alt="UTK" width="50px">
+                <div class="content">
+                    <h3>utkML</h3>
+                    <ul>
+                        <!-- <li>Aug 2021 - May 2024</li> -->
+                        <li>Learned about machine learning and how it is used in real-life.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="edu">
+                <img src="https://se-images.campuslabs.com/clink/images/2bc6bdb4-7531-4a0e-a56f-d746625d3444e7eecb1e-ba11-4f54-bfb7-600748091328.png?preset=med-sq" alt="UTK" width="50px">
+                <div class="content">
+                    <h3>Excel Modeling Club</h3>
+                    <ul>
+                        <!-- <li>Sep 2023 - May 2024</li> -->
+                        <li>Learned functions and features of Excel and prepared for the competition.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>    
+    <footer>
+        <div class="footicons">
+            <a class="btn btn-dark" onclick="darkmode()">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </a>
+            <a href="mailto:jiunkim8@gmail.com" class="btn btn-email" >
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jihunkimcode/" class="btn btn-linkedin" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/JihunKimCode" class="btn btn-github" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> Jihun Kim. All rights reserved.</p>
+            <button id="backToTopBtn"><i class="fa-solid fa-chevron-up"></i></button>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>

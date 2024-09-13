@@ -170,7 +170,7 @@ for (var i = 0; i < coll.length; i++) {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
     if (content.style.display === "none") {
-      content.style.display = "block";
+      content.style.display = "flex";
     } else {
       content.style.display = "none";
     }

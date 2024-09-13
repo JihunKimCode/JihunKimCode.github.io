@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Website Thumbnail Information -->
+    <title>Jihun Kim</title>
+    <meta property="og:url" content="https://jihunkimcode.github.io">
+    <meta property="og:title" content="Jihun Kim">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jihunkimcode.github.io/Images/JK.png">
+    <meta property="og:description" content="Virtual portfolio website created by Jihun Kim">
+    <!-- Website Information -->
+    <meta name="author" content="Jihun Kim">
+    <meta name="keywords" content="Jihun, Jihun Kim">
+    <meta name="description" content="Jihun Kim's virtual portfolio website. This website contains information about Jihun's education, skills, projects, and experiences.">
+    <!-- Website Settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../Images/JK.png">
+    <link rel="stylesheet" href="../styles.css">
+    <!-- Add Font Awesome CSS link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <button id="menuBtn">☰</button>
+        <div class="logo">
+            <div id="myLogo">
+                <a href="home.html">
+                    <img src="../Images/JK.png" alt="my Logo">
+                </a>
+            </div>
+            <name>
+                <a href="home.html">Jihun Kim</a>
+            </name>
+        </div>
+        <div id="links">
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="education.html">Education</a>
+                <a href="skills.html" class="active">Skills</a>
+                <a href="projects.html">Projects</a>
+                <a href="experiences.html">Experiences</a>
+                <a href="awards.html">Awards</a>
+            </nav>
+        </div>
+        <div class="icons">
+            <a class="btn btn-dark" onclick="darkmode()">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </a>
+            <a href="mailto:jiunkim8@gmail.com" class="btn btn-email" >
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jihunkimcode/" class="btn btn-linkedin" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/JihunKimCode" class="btn btn-github" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </header>
+    <main>
+        <!-- Proficient -->
+        <div class="skillsect">
+            <span class="skillsect-text">Proficient</span>
+            <hr class="skillsect-line">
+        </div> 
+
+        <div class="educations">
+            <div class="tools">
+                <div class="skillTitle">
+                    <img src="https://skillicons.dev/icons?i=py" alt="Python" width="50px">
+                    <h3>Python</h3>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li><b>Cybersecurity</b></li>
+                        <ul><li><a href="projects.html#cybersecurity">Diffie-Hellman, RSA, and SRA</a></li></ul>
+                        <li><b>Machine Learning</b></li>
+                        <ul>
+                            <li><a href="projects.html#classicalMusic">Create a new classical song using Recurrent Neural Network</a></li>
+                            <li><a href="projects.html#wordleSolver">Wordle Solver with Bayesian Model</a></li>
+                            <li><a href="projects.html#NeuromorphicDrone">Spiking Neural Network Drone</a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="tools">
+                <div class="skillTitle">
+                    <img src="https://skillicons.dev/icons?i=cpp" alt="C++" width="50px">
+                    <h3>C++</h3>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li><b>Algorithm</b></li>
+                        <ul>
+                            <li>Vectors and Strings</li>
+                            <ul><li><a href="projects.html#voltorbFlip">Voltorb Flip</a></li></ul>
+                            <li>Lists, Deques, Sets and Maps</li>
+                            <li>Recursion and Enumeration</li>
+                            <ul><li><a href="projects.html#puzzleSolver">Puzzle Solvers: N-Queens and Knight's Tour</a></li></ul>
+                            <li>BFS, DFS, and Dijkstra's Algorithm</li>
+                        </ul>
+                        <li><b>Cybersecurity</b></li>
+                            <ul><li><a href="projects.html#cybersecurity">AES and SHA-1</a></li></ul>
+                        <li><b>Machine Learning</b></li>
+                            <ul><li><a href="projects.html#NeuromorphicDrone">Spiking Neural Network Drone</a></li></ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Learning or Used -->
+        <div class="skillsect">
+            <span class="skillsect-text">Learning or Used</span>
+            <hr class="skillsect-line">
+        </div>    
+
+        <div class="educations">
+            <div class="tools">
+                <div class="skillTitle">
+                    <img src="https://skillicons.dev/icons?i=c" alt="C" width="50px">
+                    <h3>C</h3>
+                </div>
+                <div class="content">
+                    <li>Strings</li>
+                    <li>Memory and Malloc</li>
+                    <li>Fork, Wait, and Exec</li>
+                    <li>Thread</li>
+                </div>
+            </div>
+            <div class="tools">
+                <div class="skillTitle">
+                    <img src="https://skillicons.dev/icons?i=cs" alt="C#" width="50px">
+                    <h3>C#</h3>
+                </div>
+                <div class="content">
+                    <li>Inheritance</li>
+                    <li>Polymorphism</li>
+                    <li>Encapsulation</li>
+                </div>
+            </div>
+            <div class="tools">
+                <div class="skillTitle">
+                    <img src="https://skillicons.dev/icons?i=go" alt="GO" width="50px">
+                    <h3>GO</h3>
+                </div>
+                <div class="content">
+                    <li>Concurrency</li>
+                    <li>Goroutines</li>
+                    <li>Synchronization</li>
+                </div>
+            </div>
+            <div class="tools">
+                <div class="skillTitle">
+                    <img src="https://skillicons.dev/icons?i=bash" alt="BASH" width="50px">
+                    <h3>BASH</h3>
+                </div>
+                <div class="content">
+                    <li>File management</li>
+                    <li>Awk, Fold, Echo, Sort, etc.</li>
+                </div>
+            </div>
+        </div>
+        <div class="educations">
+            <div class="tools">
+                <div class="skillTitle">
+                    <img src="https://skillicons.dev/icons?i=ts" alt="TypeScript" width="50px">
+                    <img src="https://skillicons.dev/icons?i=sass" alt="Sass" width="50px">
+                </div>
+                <div class="content">
+                    <h3>TypeScript and Sass</h3>
+                    <li><a href="projects.html#finDining">Implementing the University Dining Website</a></li>
+                    <li><a href="projects.html#compassionMinistries">Compassion Ministries</a></li>
+                </div>
+            </div>
+            <div class="tools">
+                <div class="skillTitle">
+                    <img src="https://skillicons.dev/icons?i=html" alt="HTML" width="50px">
+                    <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" width="50px">
+                    <img src="https://skillicons.dev/icons?i=css" alt="CSS3" width="50px">
+                </div>
+                <div class="content">
+                    <h3>HTML5, JavaScript, and CSS3</h3>
+                    <li><a href="projects.html#virtualPortfolio">Virtual Portfolio Website</a></li>
+                    <li><a href="projects.html#puzzleSolver">Puzzle Solvers: N-Queens and Knight's Tour</a></li>
+                    <li><a href="projects.html#publicFacing">GenAI Fact Check Webpage</a></li>
+                    <li><a href="projects.html#wordleSolverWeb">Wordle Solver Webpage</a></li>
+                    <li><a href="projects.html#pokeAPI">Pokémon Information Searcher</a></li>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tools and Librarires -->
+        <div class="skillsect">
+            <span class="skillsect-text">Tools and Librarires</span>
+            <hr class="skillsect-line">
+        </div> 
+
+        <div class="educations">
+            <div class="tools">
+                <div class="skillTitle">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter Notebook" width="50px">
+                    <img src="https://skillicons.dev/icons?i=anaconda" alt="Anaconda" width="50px">
+                    <img src="https://skillicons.dev/icons?i=tensorflow" alt="TensorFlow" width="50px">
+                </div>
+                <div class="content">
+                    <h3>Jupyter Notebook, Anaconda, and TensorFlow</h3>
+                    <li>Mostly used for Machine Learning projects.</li>
+                </div>
+            </div>
+            <div class="tools">
+                <div class="skillTitle">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg" alt="Excel" width="50px">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" width="50px">
+                </div>
+                <div class="content">
+                    <h3>Excel and Pandas</h3>
+                    <li>Used for making graphs and tables.</li>
+                    <li><a href="projects.html#excel">Excels: Planner and Statement of Expenditure</a></li>
+                </div>
+            </div>
+            <div class="tools">
+                <div class="skillTitle">
+                    <img src="https://skillicons.dev/icons?i=mongodb" alt="MongoDB" width="50px">
+                    <img src="https://skillicons.dev/icons?i=postman" alt="Postman" width="50px">
+                </div>
+                <div class="content">
+                    <h3>MongoDB and Postman</h3>
+                    <li>Website data management and web requests.</li>
+                </div>
+            </div>
+            <div class="tools">
+                <div class="skillTitle">
+                    <img src="https://skillicons.dev/icons?i=vim" alt="Vim" width="50px">
+                    <img src="https://skillicons.dev/icons?i=vscode" alt="VSCode" width="50px">
+                </div>
+                <div class="content">
+                    <h3>Vim / Visual Studio Code</h3>
+                    <li>More convenient and efficient code writing and management.</li>
+                </div>
+            </div>
+            <div class="tools">
+                <div class="skillTitle">
+                    <img src="https://skillicons.dev/icons?i=git" alt="Git" width="50px">
+                    <img src="https://skillicons.dev/icons?i=github" alt="GitHub" width="50px">
+                    <img src="https://skillicons.dev/icons?i=gitlab" alt="GitLab" width="50px">
+                </div>
+                <div class="content">
+                    <h3>Git / GitHub / GitLab</h3>
+                    <li>Code management in personal projects.</li>
+                    <li>Separate tasks and merge code in group projects.</li>
+                </div>
+            </div>
+        </div>
+
+    </main>    
+    <footer>
+        <div class="footicons">
+            <a class="btn btn-dark" onclick="darkmode()">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </a>
+            <a href="mailto:jiunkim8@gmail.com" class="btn btn-email" >
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jihunkimcode/" class="btn btn-linkedin" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/JihunKimCode" class="btn btn-github" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> Jihun Kim. All rights reserved.</p>
+            <button id="backToTopBtn"><i class="fa-solid fa-chevron-up"></i></button>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>
