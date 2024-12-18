@@ -1213,15 +1213,24 @@ footer {
 }
 
 button#backToTopBtn {
-    background-color: transparent;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--imgborder);
     color: rgb(228, 228, 228);
     border: none;
     font-size: 24px;
     cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 button#backToTopBtn:hover {
     color: white;
+    background-color: var(--section);
 }
 
 .footicons{

@@ -126,11 +126,12 @@ window.onbeforeunload = function () {
 
 const backToTopButton = document.getElementById("backToTopBtn");
 
+window.addEventListener('scroll', () => {
+    backToTopButton.style.display = (document.documentElement.scrollTop > 20) ? "block" : "none";
+});
+
 backToTopButton.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+    document.documentElement.scrollIntoView({ behavior: 'smooth' });
 });
 
 /***************
