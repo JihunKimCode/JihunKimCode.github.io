@@ -880,11 +880,7 @@ button {
     margin-left: 5px;
 }
 
-.education .active:after {
-    content: "➕";  /*2795*/
-}
-
-.skills .active:after {
+.collapsible.active:after {
     content: "➕";  /*2795*/
 }
   
