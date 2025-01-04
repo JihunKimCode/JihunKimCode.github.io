@@ -117,7 +117,7 @@ nav {
 }
 nav a {
     color: var(--grey);
-    font-size: 24px;
+    font-size: 25px;
     text-decoration: none;
     margin-right: 10px;
     padding: 5px;
@@ -126,13 +126,13 @@ nav a {
 }
 
 nav a:hover {
-    font-size: 30px; /* Increase the font size on hover */
     color: var(--brownText);
 }
 
 /* Style for the active menu link (when the corresponding section is in view) */
 nav a.active {
-    font-size: 30px;
+    text-decoration: 4px underline;
+    text-underline-offset: 6px;
     color: var(--brownText);
 }
 
@@ -1473,7 +1473,7 @@ button#backToTopBtn:hover {
     }
     
     nav, nav a {
-        font-size: 24px;
+        font-size: 25px;
     }
 
     nav a{
@@ -1487,12 +1487,10 @@ button#backToTopBtn:hover {
 
     nav a:hover {
         color: var(--brownText);
-        font-size: 30px;
     }
     
     /* Style for the active menu link (when the corresponding section is in view) */
     nav a.active {
-        font-size: 30px;
         color: var(--brownText);
     }
     
