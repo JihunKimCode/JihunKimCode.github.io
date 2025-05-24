@@ -13,6 +13,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+/*******************
+ *  Profile Photo  *
+ *******************/
+if(document.getElementById("randomImage")){
+  const images = [
+    "../Images/Graduate.jpg",
+    "../Images/Profile.jpg",
+  ];
+
+  const randomIndex = Math.floor(Math.random() * images.length);
+  document.getElementById("randomImage").src = images[randomIndex];
+}
+
 /*****************
  *  Menu Button  *
  *****************/
