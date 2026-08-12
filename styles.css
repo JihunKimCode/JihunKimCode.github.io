@@ -293,14 +293,15 @@ desc{
 }
 
 .img-popup img {
-    width: auto;
-    max-width: 90%;
-    margin-top: 0px;
+    width: 90vw;
     height: auto;
-    max-height: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+
     border-radius: 5px;
-    border-width: 4px;
+    border: 4px solid var(--section);
     background-color: var(--section);
+
     position: relative;
     animation: smallToBig 0.5s ease;
 }
